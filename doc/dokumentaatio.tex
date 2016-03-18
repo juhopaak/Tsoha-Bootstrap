@@ -1,0 +1,42 @@
+\documentclass[12pt, oneside, a4paper, titlepage]{article}   	
+\usepackage[T1]{fontenc}
+\usepackage[finnish]{babel}
+
+\addto\captionsfinnish{
+  \renewcommand{\contentsname}
+    {Sisällys}
+}
+
+\usepackage[parfill]{parskip}    
+\usepackage{graphicx}
+\graphicspath{ {kaaviot/} }											
+
+\title{Huutokauppa-sovelluksen dokumentaatio}
+\author{Juho Pääkkönen}
+\date{}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\section{Johdanto}
+
+Toteutetaan tietokantaa käyttävä sovellus, joka tarjoaa verkossa toimivalle huutokaupalle toiminnallisuuden. Huutokaupan on tarkoitus pystyä asettamaan tuotteitaan myytäväksi huutokauppaan. Sovellusta käyttävät huutokaupan asiakkaat voivat tehdä järjestelmässä myytävänä olevista tuotteista tarjouksia, joiden perustella tuotteet myydään eniten tarjoavalle asiakkaalle.
+
+Sovellus toteutetaan Apache-palvelimelle käyttäen PHP-ohjelmointikieltä ja PostgreSQL-tietokantaa. Näin ollen sovelluksen alustajärjestelmältä edellytetään PHP-tukea. Lisäksi sovellus tulee sisältämään Javascript-pohjaisia toimintoja, joten käyttäjän selaimelta edellytetään Javascript-tukea, jotta sovelluksen kaikki toiminnot olisivat käytettävissä. Sovellus on sidonnainen käytetyllä palvelimella olevaan tietokantaan.
+
+\section{Yleiskuva järjestelmästä}
+
+\subsection{Käyttötapauskaavio}
+\includegraphics[width=\textwidth]{kayttotapauskaavio.jpg}
+
+\subsection{Käyttäjäryhmät}
+
+\subsection{Käyttötapauskuvaukset}
+
+\end{document}  
