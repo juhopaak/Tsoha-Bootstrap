@@ -7,4 +7,4 @@ Yleisiä linkkejä:
 
 ## Työn aihe
 
-Aiheeni on [huutokauppa](http://advancedkittenry.github.io/suunnittelu_ja_tyoymparisto/aiheet/Huutokauppa.html) 
+[Huutokauppa](http://advancedkittenry.github.io/suunnittelu_ja_tyoymparisto/aiheet/Huutokauppa.html) 
