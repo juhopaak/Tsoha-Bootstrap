@@ -3,4 +3,7 @@
 \contentsline {section}{\numberline {2}Yleiskuva järjestelmästä}{2}
 \contentsline {subsection}{\numberline {2.1}Käyttötapauskaavio}{2}
 \contentsline {subsection}{\numberline {2.2}Käyttäjäryhmät}{2}
-\contentsline {subsection}{\numberline {2.3}Käyttötapauskuvaukset}{2}
+\contentsline {subsection}{\numberline {2.3}Käyttötapauskuvaukset}{3}
+\contentsline {subsubsection}{\numberline {2.3.1}Asiakkaan käyttötapaukset}{3}
+\contentsline {subsubsection}{\numberline {2.3.2}Huutokaupan käyttötapaukset}{3}
+\contentsline {subsubsection}{\numberline {2.3.3}Meklarin käyttötapaukset}{4}

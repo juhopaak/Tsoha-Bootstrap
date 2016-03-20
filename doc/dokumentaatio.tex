@@ -37,6 +37,78 @@ Sovellus toteutetaan Apache-palvelimelle käyttäen PHP-ohjelmointikieltä ja Postg
 
 \subsection{Käyttäjäryhmät}
 
+\textbf{Asiakas} on rekisteröitynyt käyttäjä, joka voi tehdä tarjouksia huutokaupassa myynnissä olevista tuotteista.
+
+\textbf{Huutokauppa} on rekisteröitynyt käyttäjä, joka asettaa tuotteita myytäväksi sovellukseen sekä luokittelee tuotteita ja lisää niihin liittyviä tietoja.
+
+\textbf{Meklari} on rekisteröitynyt käyttäjä joka seuraa tuotteita ja niistä tehtyjä tarjouksia sekä vastaa kaupan etenemisestä tuotteista tehtyjen tarjousten mukaisesti.
+
 \subsection{Käyttötapauskuvaukset}
+
+\subsubsection{Asiakkaan käyttötapaukset}
+
+\textit{\textbf{Tarjouksen tekeminen}}
+
+Kirjautuneet asiakkaat voivat tehdä huutokaupassa myytävänä olevista tuotteista ostotarjouksia tiettyyn hintaan.
+
+\textit{\textbf{Tuotetietojen katselu}}
+
+Kirjautuneet asiakkaat voivat katsella huutokaupan tuotteiden tietoja. Tietoihin voi kuulua esimerkiksi tuotteiden sijainti, kunto ja mahdollinen tuotekuva.
+
+\textit{\textbf{Henkilötietojen antaminen}}
+
+Asiakkaat antavat henkilötietonsa tarjouksen tekemisen yhteydessä.
+
+\textit{\textbf{Muut käyttötapaukset}}
+
+Kirjautuminen
+
+\subsubsection{Huutokaupan käyttötapaukset}
+
+\textit{\textbf{Tuotetietojen syöttö}}
+
+Huutokauppakäyttäjä voi syöttää tuotteille tietoja, jotka kuvaavat tuotetta asiakkaille.
+
+\textit{\textbf{Tuotetietojen muokkaus}}
+
+Huutokauppakäyttäjä voi muokata tuotteille syötettyjä tietoja. Esimerkiksi voidaan vaihtaa tuoteeseen liittyvä kuva.
+
+\textit{\textbf{Tuoteluokkien lisäys}}
+
+Huutokauppakäyttäjä voi lisätä järjestelmään luokkia, joita käytetään tuotteiden luokitteluun. Esimerkiksi voidaan lisätä luokka "Matkapuhelimet".
+
+\textit{\textbf{Tuoteluokkien muokkaus}}
+
+Huutokauppakäyttäjä voi muokata tuoteluokkia. Esimerkki: vaihdetaan luokan "Matkapuhelimet" nimeksi "Älypuhelimet".
+
+\textit{\textbf{Tuoteluokkien poisto}}
+
+Huutokauppakäyttäjä voi poistaa tuoteluokkia järjestelmästä.
+
+\textit{\textbf{Muut käyttötapaukset}}
+
+Kirjautuminen.
+
+\subsubsection{Meklarin käyttötapaukset}
+
+\textit{\textbf{Seurantalistan luominen}}
+
+Meklarit voivat luoda seurantalistan, josta käy ilmi tuotteista tehdyt tarjoukset, voittamassa olevat tarjoukset sekä huomattavat muutokset tarjouksissa.
+
+\textit{\textbf{Laskun lähetys asiakkaalle}}
+
+Meklarit voivat lähettää myydystä tuotteesta laskun asiakkaalle asiakkaan syöttämien henkilötietojen perusteella.
+
+\textit{\textbf{Kaupan sulkeminen}}
+
+Meklarit voivat asettaa tuotetta koskevan kaupan suljetuksi, minkä jälkeen tuotteesta ei voi enää tehdä tarjouksia.
+
+\textit{\textbf{Tarjouksen aitouden varmistaminen}}
+
+Meklarit voivat varmistaa tuotteesta tehdyn tarjouksen aitouden tarjouksen tehneen asiakkaan henkilötietojen perusteella.
+
+\textit{\textbf{Muut käyttötapaukset}}
+
+Kirjautuminen
 
 \end{document}  
