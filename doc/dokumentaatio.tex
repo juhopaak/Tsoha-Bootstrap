@@ -111,4 +111,133 @@ Meklarit voivat varmistaa tuotteesta tehdyn tarjouksen aitouden tarjouksen tehne
 
 Kirjautuminen
 
+\section{Järjestelmän tietosisältö}
+
+\subsection{Käsitekaavio}
+\includegraphics[width=\textwidth]{kasitekaavio.jpg}
+
+\subsection{Käsitekaavion selitykset}
+
+\subsubsection{Tuote}
+
+\begin{tabular}{| c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Nimi & Merkkijono, max. 120 merkkiä & Tuotteen nimi \\ \hline
+ Ikä & Kokonaisluku & Tuotteen ikä vuosina \\ \hline
+ Sijainti & Merkkijono, max. 120 merkkiä & Tuotteen sijainti \\ \hline
+ Kuvaus & Merkkijono, max. 250 merkkiä & Tuotteen kuvaus \\ \hline
+ Tuotekuva & Merkkijono, max. 120 merkkiä & Polku tuotekuvaan \\
+ \hline
+\end{tabular}
+
+Tuote, joka on lisätty järjestelmään, mutta jota ei ole vielä asetettu myytäväksi ei vielä liity yhteenkään kauppaan. Tuote, joka on asetettu myytäväksi liittyy korkeintaan yhteen kauppaan. Tuotteella voi olla useita luokituksia mutta ei välttämättä ole yhtäkään.
+
+\subsubsection{Tuoteluokka}
+
+\begin{tabular}{| c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Nimi & Merkkijono, max. 120 merkkiä & Tuoteluokan nimi \\ \hline
+ Kuvaus & Merkkijono, max. 350 merkkiä & Tuoteluokan yleinen kuvaus \\
+ \hline
+\end{tabular}
+
+Tuoteluokkaan ei välttämättä liity yhtäkään tuotetta, mutta voi liittyä useita järjestelmässä olevia tuotteita.
+
+\subsubsection{Kauppa}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Lähtöhinta & Desimaaliluku & Myytävänä olevan tuotteen hinta \\ \hline
+ Alkaminen & Timestamp & Kaupan alkamispäivämäärä ja aika \\ \hline
+ Sulkeutuminen & Timestamp & Kaupan sulkeutumispäivämäärä ja aika \\ \hline
+ Tila & Boolean & Kaupan tila (auki tai kiinni) \\
+ \hline
+\end{tabular}
+
+Kauppaan liittyy aina vähintään yksi tuote, mutta yksi kauppa voi sisältää useita myynnissä olevia tuotteita. Kauppa liittyy aina yhteen esitteeseen, ja kauppaa hoitaa aina yksi meklari. Yhteen kauppaan liittyen voidaan tehdä nolla tai useita tarjouksia, ja yhtä kauppaa koskevia seurantalistoja voi olla tehtynä nolla tai useita.
+
+\subsubsection{Esite}
+
+\begin{tabular}{ | c | c | c | }
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Luomisaika & Timestamp & Esitteen luomisaika \\
+ \hline
+\end{tabular}
+
+Esitteeseen liittyy aina vähintään yksi kauppa, ja voi liittyä useita kauppoja.
+
+\subsubsection{Tarjous}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Aika & Timestamp & Tarjouksen tekoaika \\ \hline
+ Määrä & Desimaaliluku & Tarjouksen määrä \\
+ \hline
+\end{tabular}
+
+Tarjous liittyy aina yhteen kauppaan sekä yhteen asiakkaaseen. Tarjoukseen voi liittyä yksi tai useampia laskuja.
+
+\subsubsection{Asiakas}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Nimi & Merkkijono, max. 120 merkkiä & Asiakkaan nimi \\ \hline
+ Henkilötunnus & Merkkijono, max. 20 merkkiä & Asiakkaan henkilötunnus \\ \hline
+ Osoite & Merkkijono, max. 200 merkkiä & Asiakkaan osoite \\ \hline
+ Puhelin & Merkkijono, max. 20 merkkiä & Asiakkaan puhelinnumero \\ \hline
+ Sähköposti & Merkkijono, max. 30 merkkiä & Asiakkaan sähköpostiosoite \\
+ \hline
+\end{tabular}
+
+Asiakkaaseen voi liittyä useita, mutta ei välttämättä liity yhtäkään tarjousta.
+
+\subsubsection{Meklari}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Nimi & Merkkijono, max. 120 merkkiä & Meklarin nimi \\ \hline
+ Osoite & Merkkijono, max. 200 merkkiä & Meklarin yhteysosoite \\ \hline
+ Puhelin & Merkkijono, max. 20 merkkiä & Meklarin puhelinnumero \\ \hline
+ Sähköposti & Merkkijono, max. 30 merkkiä & Meklarin sähköpostiosoite \\
+ \hline
+\end{tabular}
+
+Meklari ei välttämättä hoida yhtäkään, mutta voi hoitaa useita kauppoja.
+
+\subsubsection{Seurantalista}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Luomisaika & Timestamp & Seurantalistan luomisaika \\
+ \hline
+\end{tabular}
+
+Seurantalista liittyy aina yhteen kauppaan.
+
+\subsubsection{Lasku}
+
+\begin{tabular}{ | c | c | c |}
+ \hline
+ \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
+ Maksutili & Merkkijono, max. 200 merkkiä & Pankki- ja tilitiedot laskun maksamiseksi \\ \hline
+ Viitenumero & Numero & Laskun viitenumero \\ \hline
+ Lähetysaika & Timestamp & Laskun lähetysaika \\ \hline
+ Eräpäivä & Timestamp & Laskun eräpäivä \\
+ \hline
+\end{tabular}
+
+Lasku liittyy aina yhteen tehtyyn tarjoukseen.
+
+\section{Relaatiotietokantakaavio}
+
+\includegraphics[width=\textwidth]{tietokantakaavio.jpg}
+
 \end{document}  

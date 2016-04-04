@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  20 MAR 2016 08:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  4 APR 2016 15:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -193,28 +193,80 @@ Overfull \hbox (10.71341pt too wide) in paragraph at lines 78--79
 a "Mat-ka-pu-he-li-met". 
  []
 
-[3] [4] (./dokumentaatio.aux) ) 
+[3] <kaaviot/kasitekaavio.jpg, id=26, 605.26125pt x 590.205pt>
+File: kaaviot/kasitekaavio.jpg Graphic file (type jpg)
+
+<use kaaviot/kasitekaavio.jpg>
+Package pdftex.def Info: kaaviot/kasitekaavio.jpg used on input line 117.
+(pdftex.def)             Requested size: 390.0pt x 380.29655pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 117--118
+[] 
+ []
+
+[4]
+Overfull \hbox (6.6885pt too wide) in paragraph at lines 123--133
+[] 
+ []
+
+[5 <./kaaviot/kasitekaavio.jpg>]
+Overfull \hbox (41.92986pt too wide) in paragraph at lines 138--145
+[] 
+ []
+
+
+Overfull \hbox (27.13483pt too wide) in paragraph at lines 150--159
+[] 
+ []
+
+[6]
+Overfull \hbox (47.00075pt too wide) in paragraph at lines 187--197
+[] 
+ []
+
+
+Overfull \hbox (32.26692pt too wide) in paragraph at lines 202--211
+[] 
+ []
+
+[7]
+Overfull \hbox (110.81152pt too wide) in paragraph at lines 227--236
+[] 
+ []
+
+<kaaviot/tietokantakaavio.jpg, id=40, 949.5475pt x 852.18375pt>
+File: kaaviot/tietokantakaavio.jpg Graphic file (type jpg)
+
+<use kaaviot/tietokantakaavio.jpg>
+Package pdftex.def Info: kaaviot/tietokantakaavio.jpg used on input line 241.
+(pdftex.def)             Requested size: 390.0pt x 350.00874pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 241--242
+[] 
+ []
+
+[8] [9 <./kaaviot/tietokantakaavio.jpg>] (./dokumentaatio.aux) ) 
 Here is how much of TeX's memory you used:
- 2159 strings out of 493089
- 29205 string characters out of 6134841
- 90768 words of memory out of 5000000
- 5621 multiletter control sequences out of 15000+600000
+ 2169 strings out of 493089
+ 29487 string characters out of 6134841
+ 94768 words of memory out of 5000000
+ 5629 multiletter control sequences out of 15000+600000
  14072 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,6n,23p,441b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
-ips/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbi1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/cm-super/sfbx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/c
-m-super/sfbx1728.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-
-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-su
-per/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm2074.pfb>
-Output written on dokumentaatio.pdf (6 pages, 211560 bytes).
+{/usr/local/tex
+live/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on dokumentaatio.pdf (11 pages, 334333 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
