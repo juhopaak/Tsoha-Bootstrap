@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Muokkaa tietoja - Tuote 1</h1>
+
+<form>
+	<div class="form-group">
+		<label>Nimike</label>
+		<input type="text" class="form-control" value="Tuote 1"></input>
+	</div>
+	<div class="form-group">
+		<label>Myyjä</label>
+		<input type="text" class="form-control" value="Joku Jossain"></input>
+	</div>
+	<div class="form-group">
+		<label>Yhteystiedot</label>
+		<input type="text" class="form-control" value="joku@jossain.fi, 040-1234567"></input>
+	</div>
+	<div class="form-group">
+		<label>Sijainti</label>
+		<input type="text" class="form-control" value="Helsinki"></input>
+	</div>
+	<div class="form-group">
+		<label>Lähtöhinta</label>
+		<input type="number" class="form-control" value="500"></input>
+	</div>
+	<div class="form-group">
+		<label>Kauppa sulkeutuu</label>
+		<input type="date" class="form-control" value="2016-04-31"></input>
+		<input type="text" class="form-control" value="23:59"></input>
+	</div>
+	<div class="form-group">
+		<label>Tuotteen kuvaus</label>
+		<textarea class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu velit bibendum, rhoncus dui at, finibus justo. Duis sodales sem felis, non dapibus nunc tincidunt eu. Morbi ut est quis leo auctor elementum sit amet ac risus. Proin at condimentum erat. Vestibulum quam nisl, luctus vitae sapien ut, luctus tempor felis. Quisque a ultrices nibh, in suscipit nunc. Sed feugiat mauris quis nisi eleifend luctus. Mauris blandit commodo leo, nec lacinia libero tempor vel. In et nisl eget neque viverra condimentum. Sed ultricies eu felis nec sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Donec cursus, lectus quis pretium consequat, enim orci porta tellus, non cursus erat nibh in metus. In neque mauris, auctor eget gravida vitae, aliquet vel orci.</textarea>
+	</div>
+	<div class="form-group">
+      <button type="submit" class="btn btn-success">Tallenna tiedot</button>
+    </div>
+</form>
+
+{% endblock %}
