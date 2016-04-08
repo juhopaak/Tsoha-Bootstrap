@@ -2,7 +2,7 @@
 
 Yleisiä linkkejä:
 
-* [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/)
+* [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa)
 * [Linkki dokumentaatiooni](doc/dokumentaatio.pdf)
 
 ## Työn aihe
