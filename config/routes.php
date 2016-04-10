@@ -12,6 +12,14 @@
     TuoteController::etusivu();
   });
 
+  $routes->post('/tuote', function() {
+    TuoteController::tallennaTuote();
+  });
+
+  $routes->get('/lisaa_tuote', function() {
+    TuoteController::lisaaTuote();
+  });
+
   $routes->get('/tuote/:tunnus', function($tunnus) {
   	TuoteController::tuote($tunnus);
   });
@@ -21,5 +29,7 @@
   });
 
   $routes->get('/kirjautuminen', function() {
-  	HelloWorldController::kirjautuminen();
+    HelloWorldController::kirjautuminen();
   });
+
+

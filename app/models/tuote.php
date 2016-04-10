@@ -61,8 +61,11 @@ class Tuote extends BaseModel {
 							  'sijainti' => $this->sijainti,
 							  'kuvaus' => $this->kuvaus,
 							  'tuotekuva' => $this->tuotekuva));
-
 		$row = $query->fetch();
+
+		//Kint::trace();
+  		//Kint::dump($row);
+
 		$this->tunnus = $row['tunnus'];
 	}
 

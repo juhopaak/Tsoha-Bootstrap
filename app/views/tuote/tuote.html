@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+{% if viesti != '' %}
+<div class="alert alert-success">
+	{{viesti}}
+</div>
+{% endif %}
+
 <h1>{{tuote.nimi}}</h1>
 
 <ul>
