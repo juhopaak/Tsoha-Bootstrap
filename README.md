@@ -12,6 +12,6 @@ Yleisiä linkkejä:
 ## Näkymien suunnitelmat
 
 * [Etusivu, jolla listataan tuotteet](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa)
-* [Yksittäisen tuotteen esittelysivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/1)
-* [Tuotetietojen muokkaussivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/1/muokkaa)
+* [Yksittäisen tuotteen esittelysivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/tuote/1)
+* [Tuotetietojen muokkaussivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/tuote/1/muokkaa)
 * [Kirjautumissivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/kirjautuminen)
