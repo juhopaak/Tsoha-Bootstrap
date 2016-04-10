@@ -10,23 +10,28 @@
 
     public static function sandbox(){
       // Testaa koodiasi täällä
-      View::make('helloworld.html');
+      //View::make('helloworld.html');
+      $tuote = Tuote::find(1);
+      $kaikki = Tuote::all();
+
+      Kint::dump($kaikki);
+      Kint::dump($tuote);
     }
 
     public static function huutokauppa(){
-      View::make('suunnitelmat/etusivu.html');
+      View::make('etusivu.html');
     }
 
     public static function tuote(){
-      View::make('suunnitelmat/tuote.html');
+      View::make('tuote.html');
     }
 
     public static function muokkaa(){
-      View::make('suunnitelmat/muokkaa_tuotetta.html');
+      View::make('muokkaa_tuotetta.html');
     }
 
     public static function kirjautuminen(){
-      View::make('suunnitelmat/kirjautuminen.html');
+      View::make('kirjautuminen.html');
     }
 
   }

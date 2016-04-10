@@ -2,7 +2,7 @@
 
 Yleisiä linkkejä:
 
-* [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa)
+* [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa)
 * [Linkki dokumentaatiooni](doc/dokumentaatio.pdf)
 
 ## Työn aihe
@@ -11,7 +11,7 @@ Yleisiä linkkejä:
 
 ## Näkymien suunnitelmat
 
-* [Etusivu, jolla listataan tuotteet](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa)
-* [Yksittäisen tuotteen esittelysivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa/1)
-* [Tuotetietojen muokkaussivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa/1/muokkaa)
-* [Kirjautumissivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/huutokauppa/kirjautuminen)
+* [Etusivu, jolla listataan tuotteet](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa)
+* [Yksittäisen tuotteen esittelysivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/1)
+* [Tuotetietojen muokkaussivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/1/muokkaa)
+* [Kirjautumissivu](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/kirjautuminen)

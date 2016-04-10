@@ -1,25 +1,25 @@
 <?php
 
-  $routes->get('/', function() {
-    HelloWorldController::index();
-  });
-
   $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
   });
 
-  $routes->get('/huutokauppa', function() {
-  	HelloWorldController::huutokauppa();
+  $routes->get('/', function() {
+    TuoteController::etusivu();
   });
 
-  $routes->get('/huutokauppa/1', function() {
-  	HelloWorldController::tuote();
+  $routes->get('/tuote', function() {
+    TuoteController::etusivu();
   });
 
-  $routes->get('/huutokauppa/1/muokkaa', function() {
-  	HelloWorldController::muokkaa();
+  $routes->get('/tuote/:tunnus', function($tunnus) {
+  	TuoteController::tuote($tunnus);
   });
 
-  $routes->get('/huutokauppa/kirjautuminen', function() {
+  $routes->get('/tuote/:tunnus/muokkaa', function($tunnus) {
+  	TuoteController::muokkaaTuotetta($tunnus);
+  });
+
+  $routes->get('/kirjautuminen', function() {
   	HelloWorldController::kirjautuminen();
   });

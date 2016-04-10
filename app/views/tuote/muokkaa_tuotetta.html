@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Muokkaa tietoja - {{tuote.nimi}}</h1>
+
+<form>
+	<div class="form-group">
+		<label>Nimike</label>
+		<input type="text" class="form-control" value="{{tuote.nimi}}"></input>
+	</div>
+	<div class="form-group">
+		<label>Meklari</label>
+		<input type="text" class="form-control" value="Joku Jossain"></input>
+	</div>
+	<div class="form-group">
+		<label>Yhteystiedot</label>
+		<input type="text" class="form-control" value="joku@jossain.fi, 040-1234567"></input>
+	</div>
+	<div class="form-group">
+		<label>Sijainti</label>
+		<input type="text" class="form-control" value="{{tuote.sijainti}}"></input>
+	</div>
+	<div class="form-group">
+		<label>Lähtöhinta</label>
+		<input type="number" class="form-control" value="500"></input>
+	</div>
+	<div class="form-group">
+		<label>Kauppa sulkeutuu</label>
+		<input type="date" class="form-control" value="2016-04-31"></input>
+		<input type="text" class="form-control" value="23:59"></input>
+	</div>
+	<div class="form-group">
+		<label>Tuotteen kuvaus</label>
+		<textarea class="form-control">{{tuote.kuvaus}}</textarea>
+	</div>
+	<div class="form-group">
+      <button type="submit" class="btn btn-success">Tallenna tiedot</button>
+    </div>
+</form>
+
+{% endblock %}
