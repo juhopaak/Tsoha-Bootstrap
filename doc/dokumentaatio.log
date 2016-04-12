@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  10 APR 2016 21:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  12 APR 2016 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -246,7 +246,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 241--242
  []
 
 [8]
-Overfull \hbox (96.6067pt too wide) in paragraph at lines 245--257
+Overfull \hbox (96.6067pt too wide) in paragraph at lines 245--258
 [] 
  []
 
@@ -268,7 +268,7 @@ xmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on dokumentaatio.pdf (11 pages, 335875 bytes).
+Output written on dokumentaatio.pdf (11 pages, 336056 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
