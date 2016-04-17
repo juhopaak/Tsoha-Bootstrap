@@ -2,10 +2,11 @@
 
 class Tuote extends BaseModel {
 
-	public $tunnus, $nimi, $ika, $sijainti, $kuvaus, $tuotekuva, $kauppa_tunnus;
+	public $tunnus, $nimi, $ika, $sijainti, $kuvaus, $tuotekuva, $kauppa_tunnus, $validators;
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
+		$this->validators = array('validate_name');
 	}
 
 	public static function all() {
@@ -89,12 +90,22 @@ class Tuote extends BaseModel {
 	public function destroy() {
 		$query = DB::connection()->prepare('DELETE FROM Tuote WHERE tunnus = :tunnus');
 
-		$query->excecute(array('tunnus' => $this->tunnus));
+		$query->execute(array('tunnus' => $this->tunnus));
 
 		$row = $query->fetch();
 
 		//Kint::trace();
 		//Kint::dump($row);
+	}
+
+	public function validate_name() {
+		$errors = array();
+		
+		if ($this->nimi == '' || $this->nimi == null) {
+			$errors[] = 'Tuotenimike on pakollinen tieto.';
+		}
+
+		return $errors;
 	}
 
 }

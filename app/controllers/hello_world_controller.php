@@ -9,13 +9,15 @@
     }
 
     public static function sandbox(){
-      // Testaa koodiasi täällä
-      //View::make('helloworld.html');
-      $tuote = Tuote::find(1);
-      $kaikki = Tuote::all();
+      
+      $tuote = new Tuote(array(
+        'nimi' => 'a',
+        'ika' => 5,
+        'sijainti' => 'Helsinki'
+      ));
 
-      Kint::dump($kaikki);
-      Kint::dump($tuote);
+      $errors = $tuote->errors();
+      Kint::dump($errors);
     }
 
     public static function huutokauppa(){

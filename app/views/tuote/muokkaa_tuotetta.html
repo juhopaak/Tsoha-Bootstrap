@@ -6,7 +6,11 @@
 <form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa">
 	<div class="form-group">
 		<label>Nimike</label>
-		<input type="text" class="form-control" value="{{tuote.nimi}}"></input>
+		<input type="text" class="form-control" name="nimi" value="{{tuote.nimi}}"></input>
+	</div>
+	<div class="form-group">
+		<label>Ikä</label>
+		<input type="text" class="form-control" name="ika" value="{{tuote.ika}}"></input>
 	</div>
 	<div class="form-group">
 		<label>Meklari</label>
@@ -18,7 +22,7 @@
 	</div>
 	<div class="form-group">
 		<label>Sijainti</label>
-		<input type="text" class="form-control" value="{{tuote.sijainti}}"></input>
+		<input type="text" class="form-control" name="sijainti" value="{{tuote.sijainti}}"></input>
 	</div>
 	<div class="form-group">
 		<label>Lähtöhinta</label>
@@ -31,8 +35,13 @@
 	</div>
 	<div class="form-group">
 		<label>Tuotteen kuvaus</label>
-		<textarea class="form-control">{{tuote.kuvaus}}</textarea>
+		<textarea class="form-control" name="kuvaus">{{tuote.kuvaus}}</textarea>
 	</div>
+	<div class="from-group">
+		<label>Linkki tuotekuvaan</label>
+		<input type="url" name="tuotekuva" class="form-control" value="{{tuote.tuotekuva}}" />
+	</div>
+	<br />
 	<div class="form-group">
       <button type="submit" class="btn btn-success">Tallenna tiedot</button>
     </div>

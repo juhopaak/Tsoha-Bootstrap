@@ -30,15 +30,21 @@ class TuoteController extends BaseController {
 		);
 
 		$tuote = new Tuote($attributes);
-		$tuote->update();
+		$errors = $tuote->errors();
 
-		Redirect::to('/tuote/'.$tuote->tunnus, array('viesti' => 'Tuotteen tiedot päivitetty!'))
+		if (count($errors == 0)) {
+			$tuote->update();
+			Redirect::to('/tuote/'.$tuote->tunnus, array('viesti' => 'Tuotteen tiedot päivitetty!'));
+		} else {
+			View::make('tuote/muokkaa_tuotetta.html');
+		}
+		
 	}
 
 	public static function poistaTuote($tunnus) {
 		$tuote = new Tuote(array('tunnus' => $tunnus));
 		$tuote->destroy();
-		Redirect::to('/tuote', array('viesti' => 'Tuote poistettu'))
+		Redirect::to('/tuote', array('viesti' => 'Tuote poistettu'));
 	}
 
 	public static function lisaaTuote() {
@@ -48,18 +54,25 @@ class TuoteController extends BaseController {
 	public static function tallennaTuote() {
 		$params = $_POST;
 
-		$tuote = new Tuote(array(
+		$attributes = array(
 			'nimi' => $params['nimi'],
 			'ika' => $params['ika'],
 			'sijainti' => $params['sijainti'],
 			'kuvaus' => $params['kuvaus'],
 			'tuotekuva' => $params['tuotekuva']
-		));
+		);
+
+		$tuote = new Tuote($attributes);
+		$errors = $tuote->errors();
 
 		//Kint::dump($params);
 
-		$tuote->save();
-
-		Redirect::to('/tuote/' . $tuote->tunnus, array('viesti' => 'Tuotteen lisäys onnistui!'));
+		if (count($errors) == 0) {
+			$tuote->save();
+			Redirect::to('/tuote/' . $tuote->tunnus, array('viesti' => 'Tuotteen lisäys onnistui!'));
+		} else {
+			View::make('tuote/uusi.html', array('errors' => $errors, 'attributes' => $attributes));
+		}
+		
 	}
 }
