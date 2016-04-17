@@ -8,3 +8,4 @@ INSERT INTO TuotteenLuokat (tuote, tuoteluokka) VALUES (1, 1);
 INSERT INTO Seurantalista (luomisaika, kauppa) VALUES (TIMESTAMP '2016-04-04 16:21:00', 1);
 INSERT INTO Tarjous (aika, maara, kauppa, asiakas) VALUES (TIMESTAMP '2016-04-04 16:21:00', 102.20, 1, 1);
 INSERT INTO Lasku (maksutili, viitenumero, lahetysaika, erapaiva, tarjous) VALUES ('125125-125125', '12451', TIMESTAMP '2016-04-04 16:21:00', TIMESTAMP '2016-04-15 16:21:00', 1);
+INSERT INTO Kayttaja (kayttajatunnus, salasana) VALUES ('testikäyttäjä', 'testi');

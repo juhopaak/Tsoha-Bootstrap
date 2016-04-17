@@ -37,7 +37,11 @@
   });
 
   $routes->get('/kirjautuminen', function() {
-    HelloWorldController::kirjautuminen();
+    KayttajaController::kirjaudu();
+  });
+
+  $routes->post('/kirjautuminen', function() {
+    KayttajaController::kasittele_kirjautuminen();
   });
 
 

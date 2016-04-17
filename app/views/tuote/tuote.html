@@ -19,11 +19,14 @@
 	<li><strong>Kaupan tila:</strong> <label class="label label-success">Auki</label></li>
 	<li><strong>Kauppa sulkeutuu:</strong> 31.4.2016 23:59</li>
 </ul>
-<a href="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa" class="btn btn-info">Muokkaa tuotteen tietoja</a>
 
-<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/poista" style="display: inline-block;">
-	<button class="btn btn-danger">Poista tuote</button>
-</form>
+{% if user_logged_in %}
+	<a href="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa" class="btn btn-info">Muokkaa tuotteen tietoja</a>
+
+	<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/poista" style="display: inline-block;">
+		<button class="btn btn-danger">Poista tuote</button>
+	</form>
+{% endif %}
 
 <div class="row">
 	<h2>Tuotteen kuvaus</h2>

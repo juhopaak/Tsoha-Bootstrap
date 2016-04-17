@@ -11,7 +11,9 @@
 
 <h2>Myynnissä olevat tuotteet</h2>
 
-<a href="{{base_path}}/lisaa_tuote" class="btn btn-success">Lisää tuote</a>
+{% if user_logged_in %}
+	<a href="{{base_path}}/lisaa_tuote" class="btn btn-success">Lisää tuote</a>
+{% endif %}
 
 <table class="table table-striped">
 	<thead>

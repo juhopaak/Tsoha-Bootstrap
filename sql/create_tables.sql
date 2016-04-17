@@ -71,3 +71,9 @@ CREATE TABLE Lasku (
 	erapaiva timestamp NOT NULL,
 	tarjous INTEGER REFERENCES Tarjous(tunnus)
 );
+
+CREATE TABLE Kayttaja(
+	tunnus SERIAL PRIMARY KEY,
+	kayttajatunnus varchar(120) NOT NULL,
+	salasana varchar(20) NOT NULL
+);
