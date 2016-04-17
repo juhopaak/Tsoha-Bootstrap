@@ -27,6 +27,14 @@
   $routes->get('/tuote/:tunnus/muokkaa', function($tunnus) {
   	TuoteController::muokkaaTuotetta($tunnus);
   });
+  
+  $routes->post('/tuote/:tunnus/muokkaa', function($tunnus) {
+    TuoteController::paivitaTuote($tunnus);
+  });
+
+  $routes->post('/tuote/:tunnus/poista', function($tunnus) {
+    TuoteController::poistaTuote($tunnus);
+  });
 
   $routes->get('/kirjautuminen', function() {
     HelloWorldController::kirjautuminen();

@@ -3,6 +3,12 @@
 
 <h1>Huutokauppa</h1>
 
+{% if viesti != '' %}
+<div class="alert alert-success">
+	{{viesti}}
+</div>
+{% endif %}
+
 <h2>Myynnissä olevat tuotteet</h2>
 
 <a href="{{base_path}}/lisaa_tuote" class="btn btn-success">Lisää tuote</a>

@@ -3,7 +3,7 @@
 
 <h1>Muokkaa tietoja - {{tuote.nimi}}</h1>
 
-<form>
+<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa">
 	<div class="form-group">
 		<label>Nimike</label>
 		<input type="text" class="form-control" value="{{tuote.nimi}}"></input>

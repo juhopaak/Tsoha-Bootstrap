@@ -70,11 +70,31 @@ class Tuote extends BaseModel {
 	}
 
 	public function update() {
+		$query = DB::connection()->prepare('UPDATE Tuote SET nimi = :nimi, ika = :ika, sijainti = :sijainti, kuvaus = :kuvaus, tuotekuva = :tuotekuva WHERE tunnus = :tunnus RETURNING tunnus');
 
+		$query->execute(array('tunnus' => $this->tunnus,
+							  'nimi' => $this->nimi,
+							  'ika' => $this->ika,
+							  'sijainti' => $this->sijainti,
+							  'kuvaus' => $this->kuvaus,
+							  'tuotekuva' => $this->tuotekuva));
+		$row = $query->fetch();
+
+		//Kint::trace();
+  		//Kint::dump($row);
+
+		$this->tunnus = $row['tunnus'];
 	}
 
 	public function destroy() {
-		
+		$query = DB::connection()->prepare('DELETE FROM Tuote WHERE tunnus = :tunnus');
+
+		$query->excecute(array('tunnus' => $this->tunnus));
+
+		$row = $query->fetch();
+
+		//Kint::trace();
+		//Kint::dump($row);
 	}
 
 }
