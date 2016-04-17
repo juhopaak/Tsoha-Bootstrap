@@ -1,10 +1,10 @@
 # Tietokantasovelluksen esittelysivu
 
-Kirjautuminen:
+## Kirjautuminen
 * Käyttäjätunnus: testikäyttäjä
 * Salasana: testi
 
-Yleisiä linkkejä:
+## Yleisiä linkkejä
 
 * [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa)
 * [Linkki dokumentaatiooni](doc/dokumentaatio.pdf)

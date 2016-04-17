@@ -1,23 +1,24 @@
 \select@language {finnish}
-\contentsline {section}{\numberline {1}Johdanto}{1}
-\contentsline {section}{\numberline {2}Yleiskuva järjestelmästä}{2}
-\contentsline {subsection}{\numberline {2.1}Käyttötapauskaavio}{2}
-\contentsline {subsection}{\numberline {2.2}Käyttäjäryhmät}{2}
-\contentsline {subsection}{\numberline {2.3}Käyttötapauskuvaukset}{3}
-\contentsline {subsubsection}{\numberline {2.3.1}Asiakkaan käyttötapaukset}{3}
-\contentsline {subsubsection}{\numberline {2.3.2}Huutokaupan käyttötapaukset}{3}
-\contentsline {subsubsection}{\numberline {2.3.3}Meklarin käyttötapaukset}{4}
-\contentsline {section}{\numberline {3}Järjestelmän tietosisältö}{5}
-\contentsline {subsection}{\numberline {3.1}Käsitekaavio}{5}
-\contentsline {subsection}{\numberline {3.2}Käsitekaavion selitykset}{6}
-\contentsline {subsubsection}{\numberline {3.2.1}Tuote}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}Tuoteluokka}{6}
-\contentsline {subsubsection}{\numberline {3.2.3}Kauppa}{6}
-\contentsline {subsubsection}{\numberline {3.2.4}Esite}{7}
-\contentsline {subsubsection}{\numberline {3.2.5}Tarjous}{7}
-\contentsline {subsubsection}{\numberline {3.2.6}Asiakas}{7}
-\contentsline {subsubsection}{\numberline {3.2.7}Meklari}{7}
-\contentsline {subsubsection}{\numberline {3.2.8}Seurantalista}{8}
-\contentsline {subsubsection}{\numberline {3.2.9}Lasku}{8}
-\contentsline {section}{\numberline {4}Relaatiotietokantakaavio}{9}
-\contentsline {section}{\numberline {5}Tuntikirjanpito}{9}
+\contentsline {section}{\numberline {1}Johdanto}{1}{section.1}
+\contentsline {section}{\numberline {2}Yleiskuva järjestelmästä}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Käyttötapauskaavio}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Käyttäjäryhmät}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Käyttötapauskuvaukset}{3}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Asiakkaan käyttötapaukset}{3}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Huutokaupan käyttötapaukset}{3}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Meklarin käyttötapaukset}{4}{subsubsection.2.3.3}
+\contentsline {section}{\numberline {3}Järjestelmän tietosisältö}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Käsitekaavio}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Käsitekaavion selitykset}{6}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Tuote}{6}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Tuoteluokka}{6}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Kauppa}{6}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Esite}{7}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Tarjous}{7}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Asiakas}{7}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Meklari}{7}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Seurantalista}{8}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}Lasku}{8}{subsubsection.3.2.9}
+\contentsline {section}{\numberline {4}Relaatiotietokantakaavio}{9}{section.4}
+\contentsline {section}{\numberline {5}Käyttöohje}{9}{section.5}
+\contentsline {section}{\numberline {6}Tuntikirjanpito}{10}{section.6}

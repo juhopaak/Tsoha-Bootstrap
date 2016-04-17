@@ -19,4 +19,9 @@ class KayttajaController extends BaseController {
 		}
 	}
 
+	public static function kirjaudu_ulos() {
+		unset($_SESSION['kayttaja']);
+		Redirect::to('/', array('viesti' => 'Uloskirjautuminen onnistui!'));
+	}
+
 }

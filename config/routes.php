@@ -44,4 +44,8 @@
     KayttajaController::kasittele_kirjautuminen();
   });
 
+  $routes->get('/kirjaudu_ulos', function() {
+    KayttajaController::kirjaudu_ulos();
+  });
+
 
