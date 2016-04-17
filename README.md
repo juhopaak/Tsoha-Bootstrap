@@ -1,5 +1,9 @@
 # Tietokantasovelluksen esittelysivu
 
+Kirjautuminen:
+* Käyttäjätunnus: testikäyttäjä
+* Salasana: testi
+
 Yleisiä linkkejä:
 
 * [Linkki sovellukseeni](http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa)
