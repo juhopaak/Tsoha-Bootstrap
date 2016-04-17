@@ -69,4 +69,12 @@ class Tuote extends BaseModel {
 		$this->tunnus = $row['tunnus'];
 	}
 
+	public function update() {
+
+	}
+
+	public function destroy() {
+		
+	}
+
 }
