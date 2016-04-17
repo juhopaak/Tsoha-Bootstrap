@@ -6,7 +6,7 @@ class Tuote extends BaseModel {
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
-		$this->validators = array('validate_name');
+		$this->validators = array('validoi_nimi', 'validoi_ika', 'validoi_sijainti', 'validoi_kuvaus');
 	}
 
 	public static function all() {
@@ -98,14 +98,66 @@ class Tuote extends BaseModel {
 		//Kint::dump($row);
 	}
 
-	public function validate_name() {
+	public function validoi_nimi() {
 		$errors = array();
 		
-		if ($this->nimi == '' || $this->nimi == null) {
+		if (!$this->tarkista_merkkijono($this->nimi)) {
 			$errors[] = 'Tuotenimike on pakollinen tieto.';
+		}
+		return $errors;
+	}
+
+	public function validoi_ika() {
+		$errors = array();
+
+		if ($this->ika == null) {
+			$errors[] = 'Tuotteen ikä on pakollinen tieto.';
+		}
+		if ($this->ika < 0) {
+			$errors[] = 'Tuotteen ikä ei voi olla pienempi kuin 0';
 		}
 
 		return $errors;
+	}
+
+	public function validoi_sijainti() {
+		$errors = array();
+
+		if (!$this->tarkista_merkkijono($this->sijainti)) {
+			$errors[] = 'Tuotteella on oltava sijainti.';
+		}
+		if (!$this->tarkista_merkkijono_pituus($this->sijainti, 2)) {
+			$errors[] = 'Tuotteen sijainti on liian lyhyt.';
+		}
+		return $errors;
+	}
+
+	public function validoi_kuvaus() {
+		$errors = array();
+
+		if (!$this->tarkista_merkkijono($this->kuvaus)) {
+			$errors[] = 'Tuotteella on oltava kuvaus';
+		}
+		if (strlen($this->kuvaus) > 250) {
+			$errors[] = 'Tuotteen kuvaus ei voi olla yli 250 merkkiä pitkä';
+		}
+		return $errors;
+	}
+
+
+
+	private function tarkista_merkkijono($jono) {
+		if ($jono == '' || $jono = null) {
+			return false;
+		}
+		return true;
+	}
+
+	private function tarkista_merkkijono_pituus($jono, $pituus) {
+		if (strlen($jono) < $pituus) {
+			return false;
+		}
+		return true;
 	}
 
 }

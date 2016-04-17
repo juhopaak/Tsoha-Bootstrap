@@ -32,11 +32,11 @@ class TuoteController extends BaseController {
 		$tuote = new Tuote($attributes);
 		$errors = $tuote->errors();
 
-		if (count($errors == 0)) {
+		if (count($errors) == 0) {
 			$tuote->update();
 			Redirect::to('/tuote/'.$tuote->tunnus, array('viesti' => 'Tuotteen tiedot päivitetty!'));
 		} else {
-			View::make('tuote/muokkaa_tuotetta.html');
+			Redirect::to('/tuote/'.$tuote->tunnus.'/muokkaa', array('errors' => $errors, 'attributes' => $attributes));
 		}
 		
 	}
