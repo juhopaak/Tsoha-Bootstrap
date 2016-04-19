@@ -13,11 +13,13 @@ class TuoteController extends BaseController {
 	}
 
 	public static function muokkaaTuotetta($tunnus) {
+		self::check_logged_in();
 		$tuote = Tuote::find($tunnus);
 		View::make('tuote/muokkaa_tuotetta.html', array('tuote' => $tuote));
 	}
 
 	public static function paivitaTuote($tunnus) {
+		self::check_logged_in();
 		$params = $_POST;
 
 		$attributes = array(
@@ -42,16 +44,19 @@ class TuoteController extends BaseController {
 	}
 
 	public static function poistaTuote($tunnus) {
+		self::check_logged_in();
 		$tuote = new Tuote(array('tunnus' => $tunnus));
 		$tuote->destroy();
 		Redirect::to('/tuote', array('viesti' => 'Tuote poistettu'));
 	}
 
 	public static function lisaaTuote() {
+		self::check_logged_in();
 		View::make('tuote/uusi.html');
 	}
 
 	public static function tallennaTuote() {
+		self::check_logged_in();
 		$params = $_POST;
 
 		$attributes = array(
