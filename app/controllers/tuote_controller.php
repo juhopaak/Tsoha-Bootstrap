@@ -27,8 +27,12 @@ class TuoteController extends BaseController {
 			'nimi' => $params['nimi'],
 			'ika' => $params['ika'],
 			'sijainti' => $params['sijainti'],
+			'lahtohinta' => $params['lahtohinta'],
+			'sulkeutuminen' => $params['sulkeutuminen'],
+			'tila' => 'true',
 			'kuvaus' => $params['kuvaus'],
-			'tuotekuva' => $params['tuotekuva']
+			'tuotekuva' => $params['tuotekuva'],
+			'meklari' => $params['meklari']
 		);
 
 		$tuote = new Tuote($attributes);
@@ -59,12 +63,17 @@ class TuoteController extends BaseController {
 		self::check_logged_in();
 		$params = $_POST;
 
+
 		$attributes = array(
 			'nimi' => $params['nimi'],
 			'ika' => $params['ika'],
 			'sijainti' => $params['sijainti'],
+			'lahtohinta' => $params['lahtohinta'],
+			'sulkeutuminen' => $params['sulkeutuminen'],
+			'tila' => 'true',
 			'kuvaus' => $params['kuvaus'],
-			'tuotekuva' => $params['tuotekuva']
+			'tuotekuva' => $params['tuotekuva'],
+			'meklari' => $params['meklari']
 		);
 
 		$tuote = new Tuote($attributes);

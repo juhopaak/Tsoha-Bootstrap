@@ -15,18 +15,28 @@
 
 <form method="post" action="{{base_path}}/tuote">
 	<div class="from-group">
-		<label>Nimike:</label>
+		<label>Nimike</label>
 		<input type="text" name="nimi" class="form-control" value="{{attributes.nimi}}" />
 	</div>
 
 	<div class="from-group">
-		<label>Ikä vuosina:</label>
+		<label>Ikä vuosina</label>
 		<input type="number" name="ika" class="form-control" value="{{attributes.ika}}" />
 	</div>
 
 	<div class="from-group">
 		<label>Sijainti</label>
 		<input type="text" name="sijainti" class="form-control" value="{{attributes.sijainti}}" />
+	</div>
+
+	<div class="from-group">
+		<label>Lähtöhinta</label>
+		<input type="number" name="lahtohinta" class="form-control" value="{{attributes.lahtohinta}}" />
+	</div>
+
+	<div class="from-group">
+		<label>Kaupan sulkeutuminen</label>
+		<input type="date" name="sulkeutuminen" class="form-control" value="{{attributes.sulkeutuminen}}" />
 	</div>
 
 	<div class="from-group">
@@ -37,6 +47,11 @@
 	<div class="from-group">
 		<label>Linkki tuotekuvaan</label>
 		<input type="url" name="tuotekuva" class="form-control" value="{{attributes.tuotekuva}}" />
+	</div>
+
+	<div class="from-group">
+		<label>Meklari</label>
+		<input type="number" name="meklari" class="form-control" value="{{attributes.meklari}}" />
 	</div>
 
 	<br/>

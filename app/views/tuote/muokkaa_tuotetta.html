@@ -31,10 +31,6 @@
 		{% endif %}
 	</div>
 	<div class="form-group">
-		<label>Meklari</label>
-		<input type="text" class="form-control" value="Joku Jossain"></input>
-	</div>
-	<div class="form-group">
 		<label>Yhteystiedot</label>
 		<input type="text" class="form-control" value="joku@jossain.fi, 040-1234567"></input>
 	</div>
@@ -48,12 +44,19 @@
 	</div>
 	<div class="form-group">
 		<label>Lähtöhinta</label>
-		<input type="number" class="form-control" value="500"></input>
+		{% if attributes %}
+			<input type="number" name="lahtohinta" class="form-control" value="{{attributes.lahtohinta}}"></input>
+		{% else %}
+			<input type="number" name="lahtohinta" class="form-control" value="{{tuote.lahtohinta}}"></input>
+		{% endif %}
 	</div>
 	<div class="form-group">
 		<label>Kauppa sulkeutuu</label>
-		<input type="date" class="form-control" value="2016-04-31"></input>
-		<input type="text" class="form-control" value="23:59"></input>
+		{% if attributes %}
+			<input type="date" name="sulkeutuminen" class="form-control" value="{{attributes.sulkeutuminen}}"></input>
+		{% else %}
+			<input type="date" name="sulkeutuminen" class="form-control" value="{{tuote.sulkeutuminen}}"></input>
+		{% endif %}
 	</div>
 	<div class="form-group">
 		<label>Tuotteen kuvaus</label>
@@ -69,6 +72,14 @@
 			<input type="url" name="tuotekuva" class="form-control" value="{{attributes.tuotekuva}}" />
 		{% else %}
 			<input type="url" name="tuotekuva" class="form-control" value="{{tuote.tuotekuva}}" />
+		{% endif %}
+	</div>
+	<div class="from-group">
+		<label>Meklari</label>
+		{% if attributes %}
+			<input type="number" name="meklari" class="form-control" value="{{attributes.meklari}}" />
+		{% else %}
+			<input type="number" name="meklari" class="form-control" value="{{tuote.meklari}}" />
 		{% endif %}
 	</div>
 	<br />

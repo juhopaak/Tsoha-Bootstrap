@@ -14,10 +14,10 @@
 	<li><strong>Meklari:</strong> <a href="#">Joku Jossain</a></li>
 	<li><strong>Yhteystiedot:</strong> joku@jossain.fi, 040-1234567</li>
 	<li><strong>Sijainti:</strong> {{tuote.sijainti}}</li>
-	<li><strong>Lähtöhinta:</strong> 500€</li>
+	<li><strong>Lähtöhinta:</strong> {{tuote.lahtohinta}}</li>
 	<li><strong>Korkein tarjous:</strong> 1000€</li>
 	<li><strong>Kaupan tila:</strong> <label class="label label-success">Auki</label></li>
-	<li><strong>Kauppa sulkeutuu:</strong> 31.4.2016 23:59</li>
+	<li><strong>Kauppa sulkeutuu:</strong> {{tuote.sulkeutuminen}}</li>
 </ul>
 
 {% if user_logged_in %}

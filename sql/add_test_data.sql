@@ -1,11 +1,5 @@
-INSERT INTO Esite (luomisaika) VALUES (TIMESTAMP '2016-04-04 16:17:00');
-INSERT INTO Meklari (nimi, osoite, puhelin, sahkoposti) VALUES ('Pekka', 'Mannerheimintie 129', '+358401234567', 'pekka@huutokauppa.fi');
-INSERT INTO Asiakas (nimi, henkilotunnus, sahkoposti) VALUES ('Marja', '130285-123X', 'marja@asiakas.com');
-INSERT INTO Kauppa (lahtohinta, alkaminen, sulkeutuminen, tila, esite, meklari) VALUES (100, TIMESTAMP '2016-04-04 16:21:00', TIMESTAMP '2016-04-15 16:17:00', true, 1, 1);
-INSERT INTO Tuote (nimi, ika, sijainti, kuvaus, kauppa) VALUES ('Iphone', 2, 'Helsinki', 'Loistava puhelin halvalla!', 1);
+INSERT INTO Kayttaja (kayttajatunnus, salasana, yhteystiedot, tyyppi) VALUES ('testikäyttäjä', 'testi', 'asiakas@kayttaja.fi', 1);
+INSERT INTO Tuote (nimi, ika, sijainti, lahtohinta, sulkeutuminen, tila, kuvaus, meklari) VALUES ('Iphone', 2, 'Helsinki', 100, '2016-04-04', 'true', 'Loistava puhelin halvalla!', 1);
 INSERT INTO Tuoteluokka (nimi, kuvaus) VALUES ('Puhelimet', 'Lähinnä älypuhelimia nykyään.');
 INSERT INTO TuotteenLuokat (tuote, tuoteluokka) VALUES (1, 1);
-INSERT INTO Seurantalista (luomisaika, kauppa) VALUES (TIMESTAMP '2016-04-04 16:21:00', 1);
-INSERT INTO Tarjous (aika, maara, kauppa, asiakas) VALUES (TIMESTAMP '2016-04-04 16:21:00', 102.20, 1, 1);
-INSERT INTO Lasku (maksutili, viitenumero, lahetysaika, erapaiva, tarjous) VALUES ('125125-125125', '12451', TIMESTAMP '2016-04-04 16:21:00', TIMESTAMP '2016-04-15 16:21:00', 1);
-INSERT INTO Kayttaja (kayttajatunnus, salasana) VALUES ('testikäyttäjä', 'testi');
+INSERT INTO Tarjous (aika, maara, tuote, kayttaja) VALUES (TIMESTAMP '2016-04-04 16:21:00', 102.20, 1, 1);

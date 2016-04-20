@@ -2,7 +2,7 @@
 
 class Kayttaja extends BaseModel {
 
-	public $tunnus, $kayttajatunnus, $salasana;
+	public $tunnus, $kayttajatunnus, $salasana, $yhteystiedot, $tyyppi;
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
@@ -17,7 +17,9 @@ class Kayttaja extends BaseModel {
 			$kayttaja = new Kayttaja(array(
 				'tunnus' => $row['tunnus'],
 				'kayttajatunnus' => $row['kayttajatunnus'],
-				'salasana' => $row['salasana']
+				'salasana' => $row['salasana'],
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tyyppi' => $row['tyyppi']
 			));
 			return $kayttaja;
 		} else {
@@ -35,6 +37,8 @@ class Kayttaja extends BaseModel {
 				'tunnus' => $row['tunnus'],
 				'kayttajatunnus' => $row['kayttajatunnus'],
 				'salasana' => $row['salasana'],
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tyyppi' => $row['tyyppi']
 			));
 			return $kayttaja;
 		}
