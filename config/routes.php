@@ -48,4 +48,16 @@
     KayttajaController::kirjaudu_ulos();
   });
 
+  $routes->get('/tuoteluokka', function() {
+    TuoteluokkaController::lista();
+  });
+
+  $routes->get('/tuoteluokka/:tunnus', function($tunnus) {
+    TuoteluokkaController::luokka($tunnus);
+  });
+
+  $routes->get('/tarjous/:tunnus/muokkaa', function($tunnus) {
+    TarjousController::muokkaaTarjousta($tunnus);
+  });
+
 
