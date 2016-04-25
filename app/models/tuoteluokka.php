@@ -82,12 +82,29 @@ class Tuoteluokka extends BaseModel {
 		//Kint::dump($row);
 	}
 
-	/*
 	public function luokanTuotteet($tunnus) {
-		$query = DB::connection()->prepare('SELECT * FROM Tuote, Tuoteluokka, TuotteenLuokat WHERE Tuote.tunnus = TuotteenLuokat.tuote  AND TuotteenLuokat.tuoteluokka = Tuoteluokka.tunnus AND Tuoteluokka.tunnus = :tunnus');
+		$query = DB::connection()->prepare('SELECT * FROM Tuote, Tuoteluokka, TuotteenLuokat WHERE Tuote.tunnus = TuotteenLuokat.tuote AND TuotteenLuokat.tuoteluokka = Tuoteluokka.tunnus AND Tuoteluokka.tunnus = :tunnus');
 		$query->execute(array('tunnus' => $tunnus));
 		$rows = $query->fetchAll();
+
+		$tuotteet = array();
+
+		foreach($rows as $row) {
+			$tuotteet[] = new Tuote(array(
+				'tunnus' => $row['tunnus'],
+				'nimi' => $row['nimi'],
+				'ika' => $row['ika'],
+				'sijainti' => $row['sijainti'],
+				'lahtohinta' => $row['lahtohinta'],
+				'sulkeutuminen' => $row['sulkeutuminen'],
+				'tila' => $row['tila'],
+				'kuvaus' => $row['kuvaus'],
+				'tuotekuva' => $row['tuotekuva'],
+				'meklari' => $row['meklari']
+			));
+		}
+
+		return $tuotteet;
 	}
-	*/
 
 }
