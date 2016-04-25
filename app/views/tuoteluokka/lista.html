@@ -3,4 +3,27 @@
 
 <h1>Tuoteluokat</h1>
 
+{% if user_logged_in %}
+	<a class="btn btn-success">Lisää tuoteluokka</a>
+{% endif %}
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nimi</th>
+			<th>Kuvaus</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for luokka in luokat %}
+			<tr>
+				<td><a href="{{base_path}}/tuoteluokka/{{luokka.tunnus}}">{{luokka.nimi}}</a></td>
+				<td>{{luokka.kuvaus}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
 {% endblock %}

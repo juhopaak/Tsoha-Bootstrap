@@ -1,6 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>{{luokka.nimi}}</h1>
+<h1>Tuoteluokka: {{luokka.nimi}}</h1>
+<a href="{{base_path}}/tuoteluokka" class="btn btn-success">Näytä kaikki tuoteluokat</a>
+{% if user_logged_in %}
+	<a class="btn btn-info">Muokkaa luokan tietoja</a>
+	<button class="btn btn-danger">Poista luokka</button>
+{% endif %}
+
+<h2>Kuvaus</h2>
+{{luokka.kuvaus}}
+
+<h2>Luokan sisältämät tuotteet</h2>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nimike</th>
+			<th>Sijainti</th>
+			<th>Lähtöhinta</th>
+			<th>Sulkeutuu</th>
+			<th>Korkein tarjous</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+	</tbody>
+</table>
 
 {% endblock %}

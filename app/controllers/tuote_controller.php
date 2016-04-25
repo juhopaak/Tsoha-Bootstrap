@@ -9,7 +9,7 @@ class TuoteController extends BaseController {
 
 	public static function tuote($tunnus) {
 		$tuote = Tuote::find($tunnus);
-		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus)
+		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus);
 		View::make('tuote/tuote.html', array('tuote' => $tuote, 'tarjoukset' => $tarjoukset));
 	}
 
