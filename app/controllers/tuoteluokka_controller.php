@@ -9,7 +9,8 @@ class TuoteluokkaController extends BaseController {
 
 	public static function luokka($tunnus) {
 		$luokka = Tuoteluokka::find($tunnus);
-		View::make('tuoteluokka/tuoteluokka.html', array('luokka' => $luokka));
+		$tuotteet = Tuoteluokka::luokanTuotteet($tunnus);
+		View::make('tuoteluokka/tuoteluokka.html', array('luokka' => $luokka, 'tuotteet' => $tuotteet));
 	}
 
 }

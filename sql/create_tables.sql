@@ -21,7 +21,7 @@ CREATE TABLE Tuote (
 
 CREATE TABLE Tuoteluokka (
 	tunnus SERIAL PRIMARY KEY,
-	nimi varchar(120) NOT NULL,
+	nimike varchar(120) NOT NULL,
 	kuvaus varchar(350)
 );
 

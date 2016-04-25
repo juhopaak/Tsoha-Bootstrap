@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Tuoteluokka: {{luokka.nimi}}</h1>
+<h1>Tuoteluokka: {{luokka.nimike}}</h1>
 <a href="{{base_path}}/tuoteluokka" class="btn btn-success">Näytä kaikki tuoteluokat</a>
 {% if user_logged_in %}
 	<a class="btn btn-info">Muokkaa luokan tietoja</a>
@@ -25,6 +25,16 @@
 	</thead>
 
 	<tbody>
+		{% for tuote in tuotteet %}
+			<tr>
+				<td><a href="{{base_path}}/tuote/{{tuote.tunnus}}">{{tuote.nimi}}</a></td>
+				<td>{{tuote.sijainti}}</td>
+				<td>{{tuote.lahtohinta}}€</td>
+				<td>{{tuote.sulkeutuminen}}</td>
+				<td>1000€</td>
+				<td><button href="#" class="btn btn-success">Tee tarjous!</button></td>
+			</tr>
+		{% endfor %}
 	</tbody>
 </table>
 

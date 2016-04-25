@@ -23,7 +23,7 @@
 
 {% if user_logged_in %}
 	<a href="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa" class="btn btn-info">Muokkaa tuotteen tietoja</a>
-
+	<a class="btn btn-success">Lisää tuotteelle luokitus</a>
 	<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/poista" style="display: inline-block;">
 		<button class="btn btn-danger">Poista tuote</button>
 	</form>

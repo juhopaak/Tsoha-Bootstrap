@@ -2,7 +2,7 @@
 
 class Tuoteluokka extends BaseModel {
 	
-	public $tunnus, $nimi, $kuvaus;
+	public $tunnus, $nimike, $kuvaus;
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
@@ -18,7 +18,7 @@ class Tuoteluokka extends BaseModel {
 		foreach($rows as $row) {
 			$luokat[] = new Tuoteluokka(array(
 				'tunnus' => $row['tunnus'],
-				'nimi' => $row['nimi'],
+				'nimike' => $row['nimike'],
 				'kuvaus' => $row['kuvaus']
 			));
 		}
@@ -34,7 +34,7 @@ class Tuoteluokka extends BaseModel {
 		if ($row) {
 			$luokka = new Tuoteluokka(array(
 				'tunnus' => $row['tunnus'],
-				'nimi' => $row['nimi'],
+				'nimike' => $row['nimike'],
 				'kuvaus' => $row['kuvaus']
 			));
 
@@ -45,9 +45,9 @@ class Tuoteluokka extends BaseModel {
 	}
 
 	public function save() {
-		$query = DB::connection()->prepare('INSERT INTO Tuoteluokka (nimi, kuvaus) VALUES (:nimi, :kuvaus) RETURNING tunnus');
+		$query = DB::connection()->prepare('INSERT INTO Tuoteluokka (nimike, kuvaus) VALUES (:nimike, :kuvaus) RETURNING tunnus');
 
-		$query->execute(array('nimi' => $this->nimi,
+		$query->execute(array('nimike' => $this->nimike,
 							  'kuvaus' => $this->kuvaus));
 		$row = $query->fetch();
 
@@ -58,10 +58,10 @@ class Tuoteluokka extends BaseModel {
 	}
 
 	public function update() {
-		$query = DB::connection()->prepare('UPDATE Tuoteluokka SET nimi = :nimi, kuvaus = :kuvaus WHERE tunnus = :tunnus RETURNING tunnus');
+		$query = DB::connection()->prepare('UPDATE Tuoteluokka SET nimike = :nimike, kuvaus = :kuvaus WHERE tunnus = :tunnus RETURNING tunnus');
 
 		$query->execute(array('tunnus' => $this->tunnus,
-							  'nimi' => $this->nimi,
+							  'nimike' => $this->nimi,
 							  'kuvaus' => $this->kuvaus));
 		$row = $query->fetch();
 
