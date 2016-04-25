@@ -53,9 +53,9 @@
 	<div class="form-group">
 		<label>Kauppa sulkeutuu</label>
 		{% if attributes %}
-			<input type="date" name="sulkeutuminen" class="form-control" value="{{attributes.sulkeutuminen}}"></input>
+			<input type="date" min="{{paivamaara}}" name="sulkeutuminen" class="form-control" value="{{attributes.sulkeutuminen}}"></input>
 		{% else %}
-			<input type="date" name="sulkeutuminen" class="form-control" value="{{tuote.sulkeutuminen}}"></input>
+			<input type="date" min="{{paivamaara}}" name="sulkeutuminen" class="form-control" value="{{tuote.sulkeutuminen}}"></input>
 		{% endif %}
 	</div>
 	<div class="form-group">

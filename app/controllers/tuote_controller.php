@@ -16,7 +16,8 @@ class TuoteController extends BaseController {
 	public static function muokkaaTuotetta($tunnus) {
 		self::check_logged_in();
 		$tuote = Tuote::find($tunnus);
-		View::make('tuote/muokkaa_tuotetta.html', array('tuote' => $tuote));
+		$pvm = date("Y-m-d");
+		View::make('tuote/muokkaa_tuotetta.html', array('tuote' => $tuote, 'paivamaara' => $pvm));
 	}
 
 	public static function paivitaTuote($tunnus) {
@@ -57,7 +58,8 @@ class TuoteController extends BaseController {
 
 	public static function lisaaTuote() {
 		self::check_logged_in();
-		View::make('tuote/uusi.html');
+		$pvm = date("Y-m-d");
+		View::make('tuote/uusi.html', array('paivamaara' => $pvm));
 	}
 
 	public static function tallennaTuote() {
