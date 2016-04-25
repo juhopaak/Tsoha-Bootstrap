@@ -127,12 +127,16 @@ Kirjautuminen
  Nimi & Merkkijono, max. 120 merkkiä & Tuotteen nimi \\ \hline
  Ikä & Kokonaisluku & Tuotteen ikä vuosina \\ \hline
  Sijainti & Merkkijono, max. 120 merkkiä & Tuotteen sijainti \\ \hline
+ Lähtöhinta & Kokonaisluku & Tuotteen lähtöhinta \\ \hline
+ Sulkeutuminen & Päivämäärä & Tuotteen sulkeutumispäivä \\ \hline
+ Tila & Boolean & Tuote voi olla joko kaupan tai ei kaupan \\ \hline
  Kuvaus & Merkkijono, max. 250 merkkiä & Tuotteen kuvaus \\ \hline
  Tuotekuva & Merkkijono, max. 120 merkkiä & Polku tuotekuvaan \\
  \hline
 \end{tabular}
 
-Tuote, joka on lisätty järjestelmään, mutta jota ei ole vielä asetettu myytäväksi ei vielä liity yhteenkään kauppaan. Tuote, joka on asetettu myytäväksi liittyy korkeintaan yhteen kauppaan. Tuotteella voi olla useita luokituksia mutta ei välttämättä ole yhtäkään.
+Tuoteeseen liittyy aina yksi käyttäjä, ja tuotteeseen voi liittyä useita tarjouksia, mutta ei välttämättä liity yhtäkään. Tuotteella voi olla useita luokituksia mutta ei välttämättä ole yhtäkään.
+
 
 \subsubsection{Tuoteluokka}
 
@@ -146,31 +150,6 @@ Tuote, joka on lisätty järjestelmään, mutta jota ei ole vielä asetettu myytäväks
 
 Tuoteluokkaan ei välttämättä liity yhtäkään tuotetta, mutta voi liittyä useita järjestelmässä olevia tuotteita.
 
-\subsubsection{Kauppa}
-
-\begin{tabular}{ | c | c | c |}
- \hline
- \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Lähtöhinta & Desimaaliluku & Myytävänä olevan tuotteen hinta \\ \hline
- Alkaminen & Timestamp & Kaupan alkamispäivämäärä ja aika \\ \hline
- Sulkeutuminen & Timestamp & Kaupan sulkeutumispäivämäärä ja aika \\ \hline
- Tila & Boolean & Kaupan tila (auki tai kiinni) \\
- \hline
-\end{tabular}
-
-Kauppaan liittyy aina vähintään yksi tuote, mutta yksi kauppa voi sisältää useita myynnissä olevia tuotteita. Kauppa liittyy aina yhteen esitteeseen, ja kauppaa hoitaa aina yksi meklari. Yhteen kauppaan liittyen voidaan tehdä nolla tai useita tarjouksia, ja yhtä kauppaa koskevia seurantalistoja voi olla tehtynä nolla tai useita.
-
-\subsubsection{Esite}
-
-\begin{tabular}{ | c | c | c | }
- \hline
- \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Luomisaika & Timestamp & Esitteen luomisaika \\
- \hline
-\end{tabular}
-
-Esitteeseen liittyy aina vähintään yksi kauppa, ja voi liittyä useita kauppoja.
-
 \subsubsection{Tarjous}
 
 \begin{tabular}{ | c | c | c |}
@@ -181,61 +160,21 @@ Esitteeseen liittyy aina vähintään yksi kauppa, ja voi liittyä useita kauppoja.
  \hline
 \end{tabular}
 
-Tarjous liittyy aina yhteen kauppaan sekä yhteen asiakkaaseen. Tarjoukseen voi liittyä yksi tai useampia laskuja.
+Tarjous liittyy aina yhteen tuotteeseen sekä yhteen käyttäjään.
 
-\subsubsection{Asiakas}
-
-\begin{tabular}{ | c | c | c |}
- \hline
- \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Nimi & Merkkijono, max. 120 merkkiä & Asiakkaan nimi \\ \hline
- Henkilötunnus & Merkkijono, max. 20 merkkiä & Asiakkaan henkilötunnus \\ \hline
- Osoite & Merkkijono, max. 200 merkkiä & Asiakkaan osoite \\ \hline
- Puhelin & Merkkijono, max. 20 merkkiä & Asiakkaan puhelinnumero \\ \hline
- Sähköposti & Merkkijono, max. 30 merkkiä & Asiakkaan sähköpostiosoite \\
- \hline
-\end{tabular}
-
-Asiakkaaseen voi liittyä useita, mutta ei välttämättä liity yhtäkään tarjousta.
-
-\subsubsection{Meklari}
+\subsubsection{Käyttäjä}
 
 \begin{tabular}{ | c | c | c |}
  \hline
  \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Nimi & Merkkijono, max. 120 merkkiä & Meklarin nimi \\ \hline
- Osoite & Merkkijono, max. 200 merkkiä & Meklarin yhteysosoite \\ \hline
- Puhelin & Merkkijono, max. 20 merkkiä & Meklarin puhelinnumero \\ \hline
- Sähköposti & Merkkijono, max. 30 merkkiä & Meklarin sähköpostiosoite \\
+ Käyttäjätunnus & Merkkijono, max. 120 merkkiä & Käyttäjän käyttäjätunnus \\ \hline
+ Salasana & Merkkijono, max. 20 merkkiä & Käyttäjän salasana \\ \hline
+ Yhteystiedot & Merkkijono, max. 200 merkkiä & Käyttäjän yhteystiedot \\ \hline
+ Tyyppi & Kokonaisluku & Käyttäjän tyyppi \\
  \hline
 \end{tabular}
 
-Meklari ei välttämättä hoida yhtäkään, mutta voi hoitaa useita kauppoja.
-
-\subsubsection{Seurantalista}
-
-\begin{tabular}{ | c | c | c |}
- \hline
- \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Luomisaika & Timestamp & Seurantalistan luomisaika \\
- \hline
-\end{tabular}
-
-Seurantalista liittyy aina yhteen kauppaan.
-
-\subsubsection{Lasku}
-
-\begin{tabular}{ | c | c | c |}
- \hline
- \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
- Maksutili & Merkkijono, max. 200 merkkiä & Pankki- ja tilitiedot laskun maksamiseksi \\ \hline
- Viitenumero & Numero & Laskun viitenumero \\ \hline
- Lähetysaika & Timestamp & Laskun lähetysaika \\ \hline
- Eräpäivä & Timestamp & Laskun eräpäivä \\
- \hline
-\end{tabular}
-
-Lasku liittyy aina yhteen tehtyyn tarjoukseen.
+Käyttäjään voi liittyä useita, mutta ei välttämättä liity yhtäkään tarjousta. Käyttäjä voi liittyä useaan mutta ei välttämättä liity yhteenkään tuotteeseen.
 
 \section{Relaatiotietokantakaavio}
 
@@ -249,6 +188,16 @@ Sovelluksen osoite: \url{http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/
 \textbf{Salasana:} testi
 
 Sovelluksen etusivulla listataan huutokaupassa myytävänä olevat tuotteet. Kirjautumaton käyttäjä voi tehdä tarjouksia myytävänä olevista tuotteista sekä katsella tuotteiden tietoja. Kirjautunut käyttäjä voi lisäksi lisätä huutokauppaan uuden tuotteen, muokata myytävänä olevan tuotteen tietoja sekä poistaa myytävänä olevan tuotteen.
+
+\section{Järjestelmän yleisrakenne}
+
+Sovellusta rakentaessa on noudatettu MVC-mallia. Kontrollerit, näkymät ja mallit sijaitsevat hakemistoissa app/controllers, app/views ja app/models. Apukirjastot on sijoitettu hakemistoon lib, ja sovelluksen käyttämät reitit ovat tiedostossa config/routes.php.
+
+\section{Käyttöliittymä ja järjestelmän komponentit}
+
+Kaaviossa siniset laatikot kuvaavat järjestelmän julkisia sivuja ja tummankeltaiset kirjautumista vaativia sivuja.
+
+\includegraphics[width=\textwidth]{komponentit.jpg}
 
 \section{Tuntikirjanpito}
 
@@ -266,7 +215,9 @@ Sovelluksen etusivulla listataan huutokaupassa myytävänä olevat tuotteet. Kirjau
  Ti 19.4.2016 & 2h & Materiaaliin tutustuminen ja tietokannan päivittäminen \\ \hline
  Ke 20.4.2016 & 1h & Tuoteluokan refaktorointia \\ \hline
  Ke 20.4.2016 & 1h & Sovelluksen laajentamista \\ \hline
- \textbf{Yhteensä} & \textbf{25,5h} & \\
+ Ma 25.4.2016 & 1h & Tuoteluokka-tietokohteen toteutus \\ \hline
+ Ma 25.4.2016 & 1h & Dokumentaation päivitys \\ \hline
+ \textbf{Yhteensä} & \textbf{27,5h} & \\
  \hline
 \end{tabular}
 

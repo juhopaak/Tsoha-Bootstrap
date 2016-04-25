@@ -11,13 +11,10 @@
 \BOOKMARK [2][-]{subsection.3.2}{Käsitekaavion selitykset}{section.3}% 11
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Tuote}{subsection.3.2}% 12
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Tuoteluokka}{subsection.3.2}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Kauppa}{subsection.3.2}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Esite}{subsection.3.2}% 15
-\BOOKMARK [3][-]{subsubsection.3.2.5}{Tarjous}{subsection.3.2}% 16
-\BOOKMARK [3][-]{subsubsection.3.2.6}{Asiakas}{subsection.3.2}% 17
-\BOOKMARK [3][-]{subsubsection.3.2.7}{Meklari}{subsection.3.2}% 18
-\BOOKMARK [3][-]{subsubsection.3.2.8}{Seurantalista}{subsection.3.2}% 19
-\BOOKMARK [3][-]{subsubsection.3.2.9}{Lasku}{subsection.3.2}% 20
-\BOOKMARK [1][-]{section.4}{Relaatiotietokantakaavio}{}% 21
-\BOOKMARK [1][-]{section.5}{Käyttöohje}{}% 22
-\BOOKMARK [1][-]{section.6}{Tuntikirjanpito}{}% 23
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Tarjous}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Käyttäjä}{subsection.3.2}% 15
+\BOOKMARK [1][-]{section.4}{Relaatiotietokantakaavio}{}% 16
+\BOOKMARK [1][-]{section.5}{Käyttöohje}{}% 17
+\BOOKMARK [1][-]{section.6}{Järjestelmän yleisrakenne}{}% 18
+\BOOKMARK [1][-]{section.7}{Käyttöliittymä ja järjestelmän komponentit}{}% 19
+\BOOKMARK [1][-]{section.8}{Tuntikirjanpito}{}% 20

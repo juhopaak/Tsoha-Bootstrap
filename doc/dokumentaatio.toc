@@ -12,13 +12,10 @@
 \contentsline {subsection}{\numberline {3.2}Käsitekaavion selitykset}{6}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Tuote}{6}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Tuoteluokka}{6}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Kauppa}{6}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Esite}{7}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Tarjous}{7}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Asiakas}{7}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Meklari}{7}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Seurantalista}{8}{subsubsection.3.2.8}
-\contentsline {subsubsection}{\numberline {3.2.9}Lasku}{8}{subsubsection.3.2.9}
-\contentsline {section}{\numberline {4}Relaatiotietokantakaavio}{9}{section.4}
-\contentsline {section}{\numberline {5}Käyttöohje}{9}{section.5}
-\contentsline {section}{\numberline {6}Tuntikirjanpito}{10}{section.6}
+\contentsline {subsubsection}{\numberline {3.2.3}Tarjous}{6}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Käyttäjä}{7}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Relaatiotietokantakaavio}{7}{section.4}
+\contentsline {section}{\numberline {5}Käyttöohje}{7}{section.5}
+\contentsline {section}{\numberline {6}Järjestelmän yleisrakenne}{8}{section.6}
+\contentsline {section}{\numberline {7}Käyttöliittymä ja järjestelmän komponentit}{8}{section.7}
+\contentsline {section}{\numberline {8}Tuntikirjanpito}{9}{section.8}
