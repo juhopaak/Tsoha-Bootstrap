@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if viesti != '' %}
+	<div class="alert alert-success">
+		{{viesti}}
+	</div>
+{% endif %}
+
 <h1>Tuoteluokka: {{luokka.nimike}}</h1>
 <a href="{{base_path}}/tuoteluokka" class="btn btn-success">Näytä kaikki tuoteluokat</a>
 {% if user_logged_in %}

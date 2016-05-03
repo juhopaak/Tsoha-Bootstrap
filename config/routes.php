@@ -64,9 +64,9 @@
     TuoteluokkaController::luokka($tunnus);
   });
 
-  $routes->get('/tuoteluokka/:tunnus/muokkaa', function($tunnus)) {
+  $routes->get('/tuoteluokka/:tunnus/muokkaa', function($tunnus) {
     TuoteluokkaController::muokkaaLuokkaa($tunnus);
-  }
+  });
 
   $routes->post('/tuoteluokka/:tunnus/muokkaa', function($tunnus) {
     TuoteluokkaController::paivitaLuokka($tunnus);

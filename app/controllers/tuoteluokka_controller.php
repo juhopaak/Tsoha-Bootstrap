@@ -16,7 +16,7 @@ class TuoteluokkaController extends BaseController {
 	public static function muokkaaLuokkaa($tunnus) {
 		self::check_logged_in();
 		$luokka = Tuoteluokka::find($tunnus);
-		View::make('tuoteluokka/muokkaa_luokkaa.html' array('luokka' => $luokka));
+		View::make('tuoteluokka/muokkaa_luokkaa.html', array('luokka' => $luokka));
 	}
 
 	public static function paivitaLuokka($tunnus) {

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if viesti != '' %}
+	<div class="alert alert-success">
+		{{viesti}}
+	</div>
+{% endif %}
+
+{% if errors %}
+  <div class="alert alert-danger">
+    <ul>
+      {% for error in errors %}
+        <li>{{error}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<h1>Muokkaa tietoja - {{luokka.nimike}}</h1>
+
+<form method="post" action="{{base_path}}/tuoteluokka/{{luokka.tunnus}}/muokkaa">
+	<div class="form-group">
+		<label>Nimike</label>
+		{% if attributes %}
+			<input type="text" class="form-control" name="nimike" value="{{attributes.nimike}}"></input>
+		{% else %}
+			<input type="text" class="form-control" name="nimike" value="{{luokka.nimike}}"></input>
+		{% endif %}
+	</div>
+	<div class="form-group">
+		<label>Luokan kuvaus</label>
+		{% if attributes %}
+			<textarea class="form-control" name="kuvaus">{{attributes.kuvaus}}</textarea>
+		{% else %}
+			<textarea class="form-control" name="kuvaus">{{luokka.kuvaus}}</textarea>
+		{% endif %}
+	</div>
+	<br />
+	<div class="form-group">
+      <button type="submit" class="btn btn-success">Tallenna tiedot</button>
+    </div>
+</form>
+
+{% endblock %}
