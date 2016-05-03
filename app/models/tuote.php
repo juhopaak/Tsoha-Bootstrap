@@ -10,7 +10,7 @@ class Tuote extends BaseModel {
 	}
 
 	public static function all() {
-		$query = DB::connection()->prepare('SELECT * FROM Tuote');
+		$query = DB::connection()->prepare('SELECT * FROM Tuote ORDER BY sulkeutuminen DESC');
 		$query->execute();
 		$rows = $query->fetchAll();
 

@@ -4,6 +4,7 @@ class TuoteController extends BaseController {
 
 	public static function etusivu() {
 		$tuotteet = Tuote::all();
+		$aika = date('Y-m-d h:i:s');
 
 		$korkeimmatTarjoukset = array();
 		foreach($tuotteet as $tuote) {
@@ -16,7 +17,7 @@ class TuoteController extends BaseController {
 			}
 		}
 
-		View::make('etusivu.html', array('tuotteet' => $tuotteet, 'tarjoukset' => $korkeimmatTarjoukset));
+		View::make('etusivu.html', array('tuotteet' => $tuotteet, 'tarjoukset' => $korkeimmatTarjoukset, 'aika' => $aika));
 	}
 
 	public static function tuote($tunnus) {
@@ -24,11 +25,12 @@ class TuoteController extends BaseController {
 		$meklari = Kayttaja::find($tuote->meklari);
 		$luokat = Tuote::tuotteenLuokat($tunnus);
 		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus);
-		$korkeinTarjous = Tarjous::korkein($tunnus);
+		$aika = date('Y-m-d h:i:s');
 
+		$korkeinTarjous = Tarjous::korkein($tunnus);
 		$korkeimmanMaara = $korkeinTarjous != null ? $korkeinTarjous->maara : 0;
 
-		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset, 'korkeinTarjous' => $korkeimmanMaara));
+		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset, 'korkeinTarjous' => $korkeimmanMaara, 'aika' => $aika));
 	}
 
 	public static function muokkaaTuotetta($tunnus) {

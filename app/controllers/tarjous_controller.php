@@ -11,7 +11,6 @@ class TarjousController extends BaseController {
 
 	public static function lisaaTarjous($tuote) {
 		$tuote = Tuote::find($tuote);
-		$aika = time();
 		$aika = date('Y-m-d h:i:s');
 		View::make('tarjous/uusi.html', array('tuote' => $tuote, 'aika' => $aika));
 	}

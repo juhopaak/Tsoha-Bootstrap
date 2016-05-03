@@ -16,10 +16,10 @@
 	<li><strong>Sijainti:</strong> {{tuote.sijainti}}</li>
 	<li><strong>Lähtöhinta:</strong> {{tuote.lahtohinta}}€</li>
 	<li><strong>Korkein tarjous:</strong> {{korkeinTarjous}}€</li>
-	{% if tuote.tila == 1 %}
+	{% if tuote.tila == 1 and tuote.sulkeutuminen > aika %}
 		<li><strong>Kaupan tila:</strong> <label class="label label-success">Auki</label></li>
 	{% else %}
-		<li><strong>Kaupan tila:</strong> <label class="label label-success">Kiinni</label></li>
+		<li><strong>Kaupan tila:</strong> <label class="label label-danger">Kiinni</label></li>
 	{%endif%}
 	<li><strong>Kauppa sulkeutuu:</strong> {{tuote.sulkeutuminen}}</li>
 </ul>
@@ -59,7 +59,7 @@
 
 <div class="row">
 <h2>Tuotteesta tehdyt tarjoukset</h2>
-	{% if tuote.tila == 1 %}
+	{% if tuote.tila == 1 and tuote.sulkeutuminen > aika %}
 		<a href="{{base_path}}/tuote/{{tuote.tunnus}}/lisaa_tarjous" class="btn btn-success">Tee tarjous!</a>
 	{% endif %}
 
