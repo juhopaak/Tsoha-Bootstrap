@@ -76,8 +76,16 @@
     TuoteluokkaController::poistaLuokka($tunnus);
   });
 
-  $routes->get('/tarjous/:tunnus/muokkaa', function($tunnus) {
-    TarjousController::muokkaaTarjousta($tunnus);
+  $routes->get('/tarjous/:tunnus', function($tunnus) {
+    TarjousController::tarjous($tunnus);
+  });
+
+  $routes->post('/tuote/:tunnus/lisaa_tarjous', function($tunnus) {
+    TarjousController::tallennaTarjous($tunnus);
+  });
+
+  $routes->get('/tuote/:tunnus/lisaa_tarjous', function($tunnus) {
+    TarjousController::lisaaTarjous($tunnus);
   });
 
   $routes->post('/tuote/:tunnus/lisaa_tuotteelle_luokka', function($tunnus) {

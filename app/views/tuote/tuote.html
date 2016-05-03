@@ -14,9 +14,13 @@
 	<li><strong>Meklari:</strong> {{meklari.kayttajatunnus}}</a></li>
 	<li><strong>Yhteystiedot:</strong> {{meklari.yhteystiedot}}</li>
 	<li><strong>Sijainti:</strong> {{tuote.sijainti}}</li>
-	<li><strong>Lähtöhinta:</strong> {{tuote.lahtohinta}}</li>
-	<li><strong>Korkein tarjous:</strong> 1000€</li>
-	<li><strong>Kaupan tila:</strong> <label class="label label-success">Auki</label></li>
+	<li><strong>Lähtöhinta:</strong> {{tuote.lahtohinta}}€</li>
+	<li><strong>Korkein tarjous:</strong> {{korkeinTarjous}}€</li>
+	{% if tuote.tila == 1 %}
+		<li><strong>Kaupan tila:</strong> <label class="label label-success">Auki</label></li>
+	{% else %}
+		<li><strong>Kaupan tila:</strong> <label class="label label-success">Kiinni</label></li>
+	{%endif%}
 	<li><strong>Kauppa sulkeutuu:</strong> {{tuote.sulkeutuminen}}</li>
 </ul>
 
@@ -55,7 +59,9 @@
 
 <div class="row">
 <h2>Tuotteesta tehdyt tarjoukset</h2>
-	<button class="btn btn-success">Tee tarjous!</button>
+	{% if tuote.tila == 1 %}
+		<a href="{{base_path}}/tuote/{{tuote.tunnus}}/lisaa_tarjous" class="btn btn-success">Tee tarjous!</a>
+	{% endif %}
 
 	{% if tarjoukset is empty == false %}
 	<table class="table">
@@ -64,6 +70,9 @@
 				<th>Hinta</th>
 				<th>Tarjoaja</th>
 				<th>Tarjous tehty</th>
+				{% if user_logged_in %}
+					<th>Tarjouksen tiedot</th>
+				{% endif %}
 			</tr>
 		</thead>
 
@@ -73,6 +82,9 @@
 				<td>{{tarjous.maara}}€</td>
 				<td>{{tarjous.yhteystiedot}}</td>
 				<td>{{tarjous.aika}}</td>
+				{% if user_logged_in %}
+					<td><a class="btn btn-info" href="{{base_path}}/tarjous/{{tarjous.tunnus}}">Näytä tiedot</a></td>
+				{% endif %}
 			</tr>
 			{% endfor %}
 		</tbody>

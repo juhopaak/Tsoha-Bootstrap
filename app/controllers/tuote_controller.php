@@ -24,8 +24,11 @@ class TuoteController extends BaseController {
 		$meklari = Kayttaja::find($tuote->meklari);
 		$luokat = Tuote::tuotteenLuokat($tunnus);
 		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus);
+		$korkeinTarjous = Tarjous::korkein($tunnus);
 
-		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset));
+		$korkeimmanMaara = $korkeinTarjous != null ? $korkeinTarjous->maara : 0;
+
+		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset, 'korkeinTarjous' => $korkeimmanMaara));
 	}
 
 	public static function muokkaaTuotetta($tunnus) {

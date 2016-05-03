@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Tarjouksen tiedot</h1>
+
+<ul>
+	<li><strong>Tuote: </strong><a href="{{base_path}}/tuote/{{tuote.tunnus}}">{{tuote.nimi}}</a></li>
+	<li><strong>Aika: </strong>{{tarjous.aika}}</li>
+	<li><strong>Määrä: </strong>{{tarjous.maara}}€</li>
+	<li><strong>Yhteystiedot: </strong>{{tarjous.yhteystiedot}}</li>
+	<li><strong>Nimi: </strong>{{tarjous.kokonimi}}</li>
+	<li><strong>Osoite: </strong>{{tarjous.osoite}}</li>
+	<li><strong>Postinumero: </strong>{{tarjous.postinro}}</li>
+	<li><strong>Kaupunki: </strong>{{tarjous.kaupunki}}</li>
+	<li><strong>Henkilöturvatunnus: </strong>{{tarjous.sotu}}</li>
+</ul>
+
+{% endblock %}

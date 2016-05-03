@@ -35,5 +35,10 @@ CREATE TABLE Tarjous (
 	aika timestamp NOT NULL,
 	maara decimal NOT NULL,
 	yhteystiedot varchar(200) NOT NULL,
+	kokonimi varchar(30) NOT NULL,
+	osoite varchar(100) NOT NULL,
+	postinro INTEGER NOT NULL,
+	kaupunki varchar(30) NOT NULL,
+	sotu varchar(20) NOT NULL,
 	tuote INTEGER REFERENCES Tuote(tunnus)
 );
