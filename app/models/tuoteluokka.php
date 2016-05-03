@@ -84,7 +84,7 @@ class Tuoteluokka extends BaseModel {
 	}
 
 	public function luokanTuotteet($tunnus) {
-		$query = DB::connection()->prepare('SELECT * FROM Tuote, Tuoteluokka, TuotteenLuokat WHERE Tuote.tunnus = TuotteenLuokat.tuote AND TuotteenLuokat.tuoteluokka = Tuoteluokka.tunnus AND Tuoteluokka.tunnus = :tunnus');
+		$query = DB::connection()->prepare('SELECT Tuote.tunnus, Tuote.nimi, Tuote.ika, Tuote.sijainti, Tuote.lahtohinta, Tuote.sulkeutuminen, Tuote.tila, Tuote.kuvaus, Tuote.tuotekuva, Tuote.meklari FROM Tuote, Tuoteluokka, TuotteenLuokat WHERE Tuote.tunnus = TuotteenLuokat.tuote AND TuotteenLuokat.tuoteluokka = Tuoteluokka.tunnus AND Tuoteluokka.tunnus = :tunnus');
 		$query->execute(array('tunnus' => $tunnus));
 		$rows = $query->fetchAll();
 
