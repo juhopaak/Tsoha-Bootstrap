@@ -43,6 +43,7 @@ class TuoteluokkaController extends BaseController {
 	public static function poistaLuokka($tunnus) {
 		self::check_logged_in();
 		$luokka = new Tuoteluokka(array('tunnus' => $tunnus));
+		TuotteenLuokatController::poistaLuokanTuotteet($tunnus);
 		$luokka->destroy();
 		Redirect::to('/tuoteluokka', array('viesti' => 'Tuoteluokka poistettu'));
 	}

@@ -88,4 +88,8 @@
     TuotteenLuokatController::lisaaTuotteelleLuokka($tunnus);
   });
 
+  $routes->post('/tuote/:tuote/poista/:luokka', function($tuote, $luokka) {
+    TuotteenLuokatController::poistaTuotteenLuokka($tuote, $luokka);
+  });
+
 

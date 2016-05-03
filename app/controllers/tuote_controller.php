@@ -53,6 +53,7 @@ class TuoteController extends BaseController {
 	public static function poistaTuote($tunnus) {
 		self::check_logged_in();
 		$tuote = new Tuote(array('tunnus' => $tunnus));
+		TuotteenLuokatController::poistaTuotteenLuokat($tunnus);
 		$tuote->destroy();
 		Redirect::to('/tuote', array('viesti' => 'Tuote poistettu'));
 	}

@@ -33,14 +33,25 @@
 	<p>{{tuote.kuvaus}}</p>
 </div>
 
-<div class="row">
-	<h2>Tuotteen luokitukset</h2>
-	<ul>
-	{% for luokka in luokat %}
-		<li><a href="{{base_path}}/tuoteluokka/{{luokka.tunnus}}">{{luokka.nimike}}</a></li>
-	{% endfor %}
-	</ul>
-</div>
+{% if luokat is empty == false  %}
+	<div class="row">
+		<h2>Tuotteen luokitukset</h2>
+		<table class="table">
+			{% for luokka in luokat %}
+				<tr>
+					<td><a href="{{base_path}}/tuoteluokka/{{luokka.tunnus}}">{{luokka.nimike}}</a></td>
+					{% if user_logged_in %}
+						<td>
+							<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/poista/{{luokka.tunnus}}" style="display: inline-block;">
+								<button href="" class="btn btn-danger">Poista luokitus</button>
+							</form>
+						</td>
+					{% endif %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endif %}
 
 <div class="row">
 <h2>Tuotteesta tehdyt tarjoukset</h2>

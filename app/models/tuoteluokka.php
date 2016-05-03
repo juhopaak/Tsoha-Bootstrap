@@ -108,6 +108,25 @@ class Tuoteluokka extends BaseModel {
 		return $tuotteet;
 	}
 
+	public function haeVapaatLuokat($tuote) {
+		$query = DB::connection()->prepare('SELECT * FROM Tuoteluokka WHERE Tuoteluokka.tunnus NOT IN (SELECT tuoteluokka FROM TuotteenLuokat WHERE tuote = :tuote)');
+		$query->execute(array('tuote' => $tuote));
+		$rows = $query->fetchAll();
+
+		$luokat = array();
+
+		foreach($rows as $row) {
+			$luokat[] = new Tuoteluokka(array(
+				'tunnus' => $row['tunnus'],
+				'nimike' => $row['nimike'],
+				'kuvaus' => $row['kuvaus']
+			));
+		}
+
+		return $luokat;
+
+	}
+
 	public function validoi_nimike() {
 		$errors = array();
 		
