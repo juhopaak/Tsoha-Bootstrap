@@ -45,4 +45,23 @@ class Kayttaja extends BaseModel {
 		return null;
 	}
 
+	public static function haeMeklarit() {
+		$query = DB::connection()->prepare('SELECT * FROM Kayttaja WHERE tyyppi = 2');
+		$query->execute();
+		$rows = $query->fetchAll();
+
+		$meklarit = array();
+
+		foreach($rows as $row) {
+			$meklarit[] = new Kayttaja(array(
+				'tunnus' => $row['tunnus'],
+				'kayttajatunnus' => $row['kayttajatunnus'],
+				'salasana' => $row['salasana'],
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tyyppi' => $row['tyyppi']
+			));
+		}
+		return $meklarit;
+	}
+
 }

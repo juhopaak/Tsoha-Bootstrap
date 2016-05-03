@@ -51,7 +51,11 @@
 
 	<div class="from-group">
 		<label>Meklari</label>
-		<input type="number" name="meklari" class="form-control" value="{{attributes.meklari}}" />
+		<select name="meklari" class="form-control">
+			{% for meklari in meklarit %}
+				<option value="{{meklari.tunnus}}">{{meklari.kayttajatunnus}}</option>
+			{% endfor %}
+		</select>
 	</div>
 
 	<br/>

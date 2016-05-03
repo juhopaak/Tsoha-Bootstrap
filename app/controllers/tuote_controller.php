@@ -9,16 +9,18 @@ class TuoteController extends BaseController {
 
 	public static function tuote($tunnus) {
 		$tuote = Tuote::find($tunnus);
+		$meklari = Kayttaja::find($tuote->meklari);
 		$luokat = Tuote::tuotteenLuokat($tunnus);
 		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus);
-		View::make('tuote/tuote.html', array('tuote' => $tuote, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset));
+		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset));
 	}
 
 	public static function muokkaaTuotetta($tunnus) {
 		self::check_logged_in();
 		$tuote = Tuote::find($tunnus);
+		$meklarit = Kayttaja::haeMeklarit();
 		$pvm = date("Y-m-d");
-		View::make('tuote/muokkaa_tuotetta.html', array('tuote' => $tuote, 'paivamaara' => $pvm));
+		View::make('tuote/muokkaa_tuotetta.html', array('tuote' => $tuote, 'paivamaara' => $pvm, 'meklarit' => $meklarit));
 	}
 
 	public static function paivitaTuote($tunnus) {
@@ -61,7 +63,8 @@ class TuoteController extends BaseController {
 	public static function lisaaTuote() {
 		self::check_logged_in();
 		$pvm = date("Y-m-d");
-		View::make('tuote/uusi.html', array('paivamaara' => $pvm));
+		$meklarit = Kayttaja::haeMeklarit();
+		View::make('tuote/uusi.html', array('paivamaara' => $pvm, 'meklarit' => $meklarit));
 	}
 
 	public static function tallennaTuote() {

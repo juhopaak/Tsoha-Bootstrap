@@ -6,7 +6,7 @@ class Tuote extends BaseModel {
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
-		$this->validators = array('validoi_nimi', 'validoi_ika', 'validoi_sijainti', 'validoi_kuvaus', 'validoi_hinta', 'validoi_sulkeutuminen', 'validoi_meklari');
+		$this->validators = array('validoi_nimi', 'validoi_ika', 'validoi_sijainti', 'validoi_kuvaus', 'validoi_hinta', 'validoi_sulkeutuminen');
 	}
 
 	public static function all() {
@@ -194,16 +194,6 @@ class Tuote extends BaseModel {
 		if ($this->sulkeutuminen == null) {
 			$errors[] = 'Tuotteella on oltava sulkeutumispäivä.';
 		}
-
-		return $errors;
-	}
-
-	public function validoi_meklari() {
-		$errors = array();
-
-		if ($this->meklari != 1) {
-			$errors[] = 'Tässä vaiheessa tuotteen meklariksi on asetettava arvo 1. Myöhemmin meklarin voi valita listalta.';
-		} 
 
 		return $errors;
 	}

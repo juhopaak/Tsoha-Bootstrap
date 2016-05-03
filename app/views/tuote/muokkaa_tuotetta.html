@@ -31,10 +31,6 @@
 		{% endif %}
 	</div>
 	<div class="form-group">
-		<label>Yhteystiedot</label>
-		<input type="text" class="form-control" value="joku@jossain.fi, 040-1234567"></input>
-	</div>
-	<div class="form-group">
 		<label>Sijainti</label>
 		{% if attributes %}
 			<input type="text" class="form-control" name="sijainti" value="{{attributes.sijainti}}"></input>
@@ -76,11 +72,15 @@
 	</div>
 	<div class="from-group">
 		<label>Meklari</label>
-		{% if attributes %}
-			<input type="number" name="meklari" class="form-control" value="{{attributes.meklari}}" />
-		{% else %}
-			<input type="number" name="meklari" class="form-control" value="{{tuote.meklari}}" />
-		{% endif %}
+		<select name="meklari" class="form-control">
+			{% for meklari in meklarit %}
+				{% if tuote.meklari == meklari.tunnus %}
+					<option value="{{meklari.tunnus}}" selected>{{meklari.kayttajatunnus}}</option>
+				{% else %}
+					<option value="{{meklari.tunnus}}">{{meklari.kayttajatunnus}}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
 	</div>
 	<br />
 	<div class="form-group">
