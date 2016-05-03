@@ -19,23 +19,28 @@
   </div>
 {% endif %}
 
-<form method="post" action="{{base_path}}/tuote/{tuote.tunnus}/lisaa_tuotteelle_luokka">
+{% if vapaatLuokat is empty == false %}
+	<h2>Valitse tuotteelle lisättävä luokka:</h2>
+	<form method="post" action="{{base_path}}/tuote/{tuote.tunnus}/lisaa_tuotteelle_luokka">
+		<input type="hidden" name="lisattava_tuote" value="{{tuote.tunnus}}" />
 
-	<input type="hidden" name="lisattava_tuote" value="{{tuote.tunnus}}" />
+		<div class="form-group">
+			<select name="lisattava_luokka" class="form-control">
+				{% for luokka in vapaatLuokat %}
+					<option value="{{luokka.tunnus}}">{{luokka.nimike}}</option>
+				{% endfor %}
+			</select>
+		</div>
 
-	<div class="form-group">
-		<label>Valitse lisättävä luokka</label>
-		<select name="lisattava_luokka" class="form-control">
-			{% for luokka in vapaatLuokat %}
-				<option value="{{luokka.tunnus}}">{{luokka.nimike}}</option>
-			{% endfor %}
-		</select>
-	</div>
+		<div class="form-group">
+	      <button type="submit" class="btn btn-primary">Lisää luokitus tuotteelle</button>
+	    </div>
+	</form>
+{% else %}
+	<p>Tuote kuuluu jo kaikkiin tuoteluokkiin!</p>
+{% endif %}
 
-	<div class="form-group">
-      <button type="submit" class="btn btn-primary">Lisää luokitus tuotteelle</button>
-    </div>
-
-</form>
+<a href="{{base_path}}/tuote/{{tuote.tunnus}}" class="btn btn-info">Takaisin tuotteen tietoihin</a>
+<a href="{{base_path}}/tuoteluokka" class="btn btn-info">Selaa tuoteluokkia</a>
 
 {% endblock %}
