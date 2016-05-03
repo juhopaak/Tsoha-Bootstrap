@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if viesti != '' %}
+<div class="alert alert-success">
+	{{viesti}}
+</div>
+{% endif %}
+
+<h1>Lisää luokitus tuotteelle: {{tuote.nimi}}</h1>
+
+<form method="post" action="{{base_path}}/tuote/{tuote.tunnus}/lisaa_tuotteelle_luokka">
+
+	<input type="hidden" name="lisattava_tuote" value="{{tuote.tunnus}}" />
+
+	<div class="form-group">
+		<label>Valitse lisättävä luokka</label>
+		<select name="lisattava_luokka" class="form-control">
+			{% for luokka in kaikkiLuokat %}
+				<option value="{{luokka.tunnus}}">{{luokka.nimike}}</option>
+			{% endfor %}
+		</select>
+	</div>
+
+	<div class="form-group">
+      <button type="submit" class="btn btn-primary">Lisää luokitus tuotteelle</button>
+    </div>
+
+</form>
+
+
+{% endblock %}

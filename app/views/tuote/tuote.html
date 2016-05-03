@@ -13,7 +13,6 @@
 <ul>
 	<li><strong>Meklari:</strong> <a href="#">Joku Jossain</a></li>
 	<li><strong>Yhteystiedot:</strong> joku@jossain.fi, 040-1234567</li>
-	<li><strong>Tuoteluokka:</strong><a href="{{base_path}}/tuoteluokka/1"> Puhelimet</a></li>
 	<li><strong>Sijainti:</strong> {{tuote.sijainti}}</li>
 	<li><strong>Lähtöhinta:</strong> {{tuote.lahtohinta}}</li>
 	<li><strong>Korkein tarjous:</strong> 1000€</li>
@@ -23,7 +22,7 @@
 
 {% if user_logged_in %}
 	<a href="{{base_path}}/tuote/{{tuote.tunnus}}/muokkaa" class="btn btn-info">Muokkaa tuotteen tietoja</a>
-	<a class="btn btn-success">Lisää tuotteelle luokitus</a>
+	<a href="{{base_path}}/tuote/{{tuote.tunnus}}/lisaa_tuotteelle_luokka" class="btn btn-success">Lisää tuotteelle luokitus</a>
 	<form method="post" action="{{base_path}}/tuote/{{tuote.tunnus}}/poista" style="display: inline-block;">
 		<button class="btn btn-danger">Poista tuote</button>
 	</form>
@@ -34,28 +33,40 @@
 	<p>{{tuote.kuvaus}}</p>
 </div>
 
-<h2>Tuotteesta tehdyt tarjoukset</h2>
-<button class="btn btn-success">Tee tarjous!</button>
-<table class="table">
-	<thead>
-		<tr>
-			<th>Hinta</th>
-			<th>Tarjoaja</th>
-			<th>Tarjous tehty</th>
-		</tr>
-	</thead>
+<div class="row">
+	<h2>Tuotteen luokitukset</h2>
+	<ul>
+	{% for luokka in luokat %}
+		<li><a href="{{base_path}}/tuoteluokka/{{luokka.tunnus}}">{{luokka.nimike}}</a></li>
+	{% endfor %}
+	</ul>
+</div>
 
-	<tbody>
-		<tr>
-			<td>1000€</td>
-			<td><a href="#">Joku Käyttäjä</a></td>
-			<td>4.4.2016 11:06</td>
-		</tr>
-		<tr>
-			<td>699€</td>
-			<td><a href="#">Toinen Käyttäjä</a></td>
-			<td>3.4.2016 16:43</td>
-		</tr>
-	</tbody>
-</table>
+<div class="row">
+<h2>Tuotteesta tehdyt tarjoukset</h2>
+	<button class="btn btn-success">Tee tarjous!</button>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Hinta</th>
+				<th>Tarjoaja</th>
+				<th>Tarjous tehty</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1000€</td>
+				<td><a href="#">Joku Käyttäjä</a></td>
+				<td>4.4.2016 11:06</td>
+			</tr>
+			<tr>
+				<td>699€</td>
+				<td><a href="#">Toinen Käyttäjä</a></td>
+				<td>3.4.2016 16:43</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
 {% endblock %}

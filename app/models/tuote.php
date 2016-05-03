@@ -112,13 +112,22 @@ class Tuote extends BaseModel {
 		//Kint::dump($row);
 	}
 
-	/*
 	public function tuotteenLuokat($tunnus) {
-		$query = DB::connection()->prepare('SELECT * FROM Tuote, Tuoteluokka, TuotteenLuokat WHERE Tuoteluokka.tunnus = TuotteenLuokat.tuoteluokka AND TuotteenLuokat.tuote = Tuote.tunnus AND Tuote.tunnus = :tunnus');
+		$query = DB::connection()->prepare('SELECT Tuoteluokka.tunnus, Tuoteluokka.nimike FROM Tuoteluokka, Tuote, TuotteenLuokat WHERE Tuoteluokka.tunnus = TuotteenLuokat.tuoteluokka AND TuotteenLuokat.tuote = Tuote.tunnus AND Tuote.tunnus = :tunnus');
 		$query->execute(array('tunnus' => $tunnus));
 		$rows = $query->fetchAll();
+
+		$luokat = array();
+
+		foreach($rows as $row) {
+			$luokat[] = new Tuoteluokka(array(
+				'tunnus' => $row['tunnus'],
+				'nimike' => $row['nimike']
+			));
+		}
+
+		return $luokat;
 	}
-	*/
 
 	public function validoi_nimi() {
 		$errors = array();

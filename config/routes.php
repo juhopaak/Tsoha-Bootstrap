@@ -80,4 +80,12 @@
     TarjousController::muokkaaTarjousta($tunnus);
   });
 
+  $routes->post('/tuote/:tunnus/lisaa_tuotteelle_luokka', function($tunnus) {
+    TuotteenLuokatController::tallennaTuotteenLuokka();
+  });
+
+  $routes->get('/tuote/:tunnus/lisaa_tuotteelle_luokka', function($tunnus) {
+    TuotteenLuokatController::lisaaTuotteelleLuokka($tunnus);
+  });
+
 
