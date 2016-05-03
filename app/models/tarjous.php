@@ -2,14 +2,14 @@
 
 class Tarjous extends BaseModel {
 
-	public $tunnus, $aika, $maara, $tuote, $kayttaja;
+	public $tunnus, $aika, $maara, $yhteystiedot, $tuote;
 
 	public function __construct($attribuutit) {
 		parent::__construct($attribuutit);
 	}
 	
 	public static function tuotteenTarjoukset($tuote) {
-		$query = DB::connection()->prepare('SELECT * FROM Tarjous WHERE tuote = :tuote');
+		$query = DB::connection()->prepare('SELECT * FROM Tarjous WHERE tuote = :tuote ORDER BY aika DESC');
 		$query->execute(array('tuote' => $tuote));
 		$rows = $query->fetchAll();
 
@@ -20,8 +20,8 @@ class Tarjous extends BaseModel {
 				'tunnus' => $row['tunnus'],
 				'aika' => $row['aika'],
 				'maara' => $row['maara'],
-				'tuote' => $row['tuote'],
-				'kayttaja' => $row['kayttaja']								
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tuote' => $row['tuote']							
 			));
 		}
 
@@ -38,8 +38,8 @@ class Tarjous extends BaseModel {
 				'tunnus' => $row['tunnus'],
 				'aika' => $row['aika'],
 				'maara' => $row['maara'],
-				'tuote' => $row['tuote'],
-				'kayttaja' => $row['kayttaja']
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tuote' => $row['tuote']
 			));
 
 			return $tarjous;
@@ -51,26 +51,30 @@ class Tarjous extends BaseModel {
 	public static function korkein($tuote) {
 		$query = DB::connection()->prepare('SELECT * FROM Tarjous WHERE tuote = :tuote ORDER BY maara DESC LIMIT 1');
 		$query->execute(array('tuote' => $tuote));
-		$rows = $query->fetch();
+		$row = $query->fetch();
 
 		if ($row) {
 			$tarjous = new Tarjous(array(
 				'tunnus' => $row['tunnus'],
 				'aika' => $row['aika'],
 				'maara' => $row['maara'],
-				'tuote' => $row['tuote'],
-				'kayttaja' => $row['kayttaja']
+				'yhteystiedot' => $row['yhteystiedot'],
+				'tuote' => $row['tuote']
 			));
+
+			return $tarjous;
 		}
+
+		return null;
 	}
 
 	public function save() {
-		$query = DB::connection()->prepare('INSERT INTO Tarjous (aika, maara, tuote, kayttaja) VALUES (:aika, :maara, :tuote, :kayttaja) RETURNING tunnus');
+		$query = DB::connection()->prepare('INSERT INTO Tarjous (aika, maara, yhteystiedot, tuote) VALUES (:aika, :maara, :yhteystiedot, :tuote) RETURNING tunnus');
 
 		$query->execute(array('aika' => $this->aika,
 							  'maara' => $this->maara,
-							  'tuote' => $this->tuote,
-							  'kayttaja' => $this->kayttaja));
+							  'yhteystiedot' => $this->yhteystiedot,
+							  'tuote' => $this->tuote));
 		$row = $query->fetch();
 
 		//Kint::trace();
@@ -80,13 +84,13 @@ class Tarjous extends BaseModel {
 	}
 
 	public function update() {
-		$query = DB::connection()->prepare('UPDATE Tarjous SET aika = :aika, maara = :maara, tuote = :tuote, kayttaja = :kayttaja WHERE tunnus = :tunnus RETURNING tunnus');
+		$query = DB::connection()->prepare('UPDATE Tarjous SET aika = :aika, maara = :maara, yhteystiedot = :yhteystiedot, tuote = :tuote WHERE tunnus = :tunnus RETURNING tunnus');
 
 		$query->execute(array('tunnus' => $this->tunnus,
 							  'aika' => $this->aika,
 							  'maara' => $this->maara,
-							  'tuote' => $this->tuote,
-							  'kayttaha' => $this->kayttaja));
+							  'yhteystiedot' => $this->yhteystiedot,
+							  'tuote' => $this->tuote));
 		$row = $query->fetch();
 
 		//Kint::trace();

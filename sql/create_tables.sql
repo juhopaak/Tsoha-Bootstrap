@@ -34,6 +34,6 @@ CREATE TABLE Tarjous (
 	tunnus SERIAL PRIMARY KEY,
 	aika timestamp NOT NULL,
 	maara decimal NOT NULL,
-	tuote INTEGER REFERENCES Tuote(tunnus),
-	kayttaja INTEGER REFERENCES Kayttaja(tunnus)
+	yhteystiedot varchar(200) NOT NULL,
+	tuote INTEGER REFERENCES Tuote(tunnus)
 );

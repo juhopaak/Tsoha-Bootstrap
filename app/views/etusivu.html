@@ -36,7 +36,11 @@
 				<td>{{tuote.sijainti}}</td>
 				<td>{{tuote.lahtohinta}}€</td>
 				<td>{{tuote.sulkeutuminen}}</td>
-				<td>1000€</td>
+				{% if tarjoukset[tuote.tunnus] != '-' %}
+					<td>{{tarjoukset[tuote.tunnus]}}€</td>
+				{% else %}
+					<td>Tuotteesta ei ole tehty vielä tarjouksia</td>
+				{% endif %}
 				<td><button href="#" class="btn btn-success">Tee tarjous!</button></td>
 			</tr>
 		{% endfor %}

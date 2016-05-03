@@ -4,7 +4,19 @@ class TuoteController extends BaseController {
 
 	public static function etusivu() {
 		$tuotteet = Tuote::all();
-		View::make('etusivu.html', array('tuotteet' => $tuotteet));
+
+		$korkeimmatTarjoukset = array();
+		foreach($tuotteet as $tuote) {
+			$tarjous = Tarjous::korkein($tuote->tunnus);
+
+			if ($tarjous != null) {
+				$korkeimmatTarjoukset[$tuote->tunnus] = $tarjous->maara;
+			} else {
+				$korkeimmatTarjoukset[$tuote->tunnus] = '-';
+			}
+		}
+
+		View::make('etusivu.html', array('tuotteet' => $tuotteet, 'tarjoukset' => $korkeimmatTarjoukset));
 	}
 
 	public static function tuote($tunnus) {
@@ -12,6 +24,7 @@ class TuoteController extends BaseController {
 		$meklari = Kayttaja::find($tuote->meklari);
 		$luokat = Tuote::tuotteenLuokat($tunnus);
 		$tarjoukset = Tarjous::tuotteenTarjoukset($tunnus);
+
 		View::make('tuote/tuote.html', array('tuote' => $tuote, 'meklari' => $meklari, 'luokat' => $luokat, 'tarjoukset' => $tarjoukset));
 	}
 

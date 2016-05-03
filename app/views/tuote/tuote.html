@@ -56,6 +56,8 @@
 <div class="row">
 <h2>Tuotteesta tehdyt tarjoukset</h2>
 	<button class="btn btn-success">Tee tarjous!</button>
+
+	{% if tarjoukset is empty == false %}
 	<table class="table">
 		<thead>
 			<tr>
@@ -66,18 +68,18 @@
 		</thead>
 
 		<tbody>
+			{% for tarjous in tarjoukset %}
 			<tr>
-				<td>1000€</td>
-				<td><a href="#">Joku Käyttäjä</a></td>
-				<td>4.4.2016 11:06</td>
+				<td>{{tarjous.maara}}€</td>
+				<td>{{tarjous.yhteystiedot}}</td>
+				<td>{{tarjous.aika}}</td>
 			</tr>
-			<tr>
-				<td>699€</td>
-				<td><a href="#">Toinen Käyttäjä</a></td>
-				<td>3.4.2016 16:43</td>
-			</tr>
+			{% endfor %}
 		</tbody>
 	</table>
+	{% else %}
+		<p>Tuotteesta ei ole vielä tehty tarjouksia!</p>
+	{% endif %}
 </div>
 
 {% endblock %}
