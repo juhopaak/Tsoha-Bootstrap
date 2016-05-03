@@ -4,8 +4,10 @@
 <h1>Tuoteluokka: {{luokka.nimike}}</h1>
 <a href="{{base_path}}/tuoteluokka" class="btn btn-success">Näytä kaikki tuoteluokat</a>
 {% if user_logged_in %}
-	<a class="btn btn-info">Muokkaa luokan tietoja</a>
-	<button class="btn btn-danger">Poista luokka</button>
+	<a href="{{base_path}}/tuoteluokka/{{luokka.tunnus}}/muokkaa" class="btn btn-info">Muokkaa luokan tietoja</a>
+	<form method="post" action="{{base_path}}/tuoteluokka/{{luokka.tunnus}}/poista" style="display: inline-block">
+		<button class="btn btn-danger">Poista luokka</button>
+	</form>
 {% endif %}
 
 <h2>Kuvaus</h2>

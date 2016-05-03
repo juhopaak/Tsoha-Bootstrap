@@ -52,8 +52,28 @@
     TuoteluokkaController::lista();
   });
 
+  $routes->post('/tuoteluokka', function() {
+    TuoteluokkaController::tallennaLuokka();
+  });
+
+  $routes->get('/tuoteluokka/lisaa_luokka', function() {
+    TuoteluokkaController::lisaaLuokka();
+  });
+
   $routes->get('/tuoteluokka/:tunnus', function($tunnus) {
     TuoteluokkaController::luokka($tunnus);
+  });
+
+  $routes->get('/tuoteluokka/:tunnus/muokkaa', function($tunnus)) {
+    TuoteluokkaController::muokkaaLuokkaa($tunnus);
+  }
+
+  $routes->post('/tuoteluokka/:tunnus/muokkaa', function($tunnus) {
+    TuoteluokkaController::paivitaLuokka($tunnus);
+  });
+
+  $routes->post('/tuoteluokka/:tunnus/poista', function($tunnus) {
+    TuoteluokkaController::poistaLuokka($tunnus);
   });
 
   $routes->get('/tarjous/:tunnus/muokkaa', function($tunnus) {
