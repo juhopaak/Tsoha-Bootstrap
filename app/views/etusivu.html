@@ -48,7 +48,7 @@
 						<td><label class="label label-danger">Kiinni</td>
 					{%endif%}
 					{% if tuote.sulkeutuminen > aika %}
-						<td><button href="#" class="btn btn-success">Tee tarjous!</button></td>
+						<td><a href="{{base_path}}/tuote/{{tuote.tunnus}}/lisaa_tarjous" class="btn btn-success">Tee tarjous!</a></td>
 					{% endif %}
 				</tr>
 		{% endfor %}
