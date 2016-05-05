@@ -10,7 +10,19 @@ class TuoteluokkaController extends BaseController {
 	public static function luokka($tunnus) {
 		$luokka = Tuoteluokka::find($tunnus);
 		$tuotteet = Tuoteluokka::luokanTuotteet($tunnus);
-		View::make('tuoteluokka/tuoteluokka.html', array('luokka' => $luokka, 'tuotteet' => $tuotteet));
+
+		$korkeimmatTarjoukset = array();
+		foreach($tuotteet as $tuote) {
+			$tarjous = Tarjous::korkein($tuote->tunnus);
+
+			if ($tarjous != null) {
+				$korkeimmatTarjoukset[$tuote->tunnus] = $tarjous->maara;
+			} else {
+				$korkeimmatTarjoukset[$tuote->tunnus] = '-';
+			}
+		}
+
+		View::make('tuoteluokka/tuoteluokka.html', array('luokka' => $luokka, 'tuotteet' => $tuotteet, 'tarjoukset' => $korkeimmatTarjoukset));
 	}
 
 	public static function muokkaaLuokkaa($tunnus) {

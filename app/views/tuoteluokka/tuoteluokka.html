@@ -28,20 +28,32 @@
 			<th>Lähtöhinta</th>
 			<th>Sulkeutuu</th>
 			<th>Korkein tarjous</th>
+			<th>Tila</th>
 			<th></th>
 		</tr>
 	</thead>
 
 	<tbody>
 		{% for tuote in tuotteet %}
-			<tr>
-				<td><a href="{{base_path}}/tuote/{{tuote.tunnus}}">{{tuote.nimi}}</a></td>
-				<td>{{tuote.sijainti}}</td>
-				<td>{{tuote.lahtohinta}}€</td>
-				<td>{{tuote.sulkeutuminen}}</td>
-				<td>1000€</td>
-				<td><button href="#" class="btn btn-success">Tee tarjous!</button></td>
-			</tr>
+				<tr>
+					<td><a href="{{base_path}}/tuote/{{tuote.tunnus}}">{{tuote.nimi}}</a></td>
+					<td>{{tuote.sijainti}}</td>
+					<td>{{tuote.lahtohinta}}€</td>
+					<td>{{tuote.sulkeutuminen}}</td>
+					{% if tarjoukset[tuote.tunnus] != '-' %}
+						<td>{{tarjoukset[tuote.tunnus]}}€</td>
+					{% else %}
+						<td>Tuotteesta ei ole tehty vielä tarjouksia</td>
+					{% endif %}
+					{% if tuote.tila == 1 and tuote.sulkeutuminen > aika %}
+						<td><label class="label label-success">Auki</label></td>
+					{% else %}
+						<td><label class="label label-danger">Kiinni</td>
+					{%endif%}
+					{% if tuote.sulkeutuminen > aika %}
+						<td><a href="{{base_path}}/tuote/{{tuote.tunnus}}/lisaa_tarjous" class="btn btn-success">Tee tarjous!</a></td>
+					{% endif %}
+				</tr>
 		{% endfor %}
 	</tbody>
 </table>

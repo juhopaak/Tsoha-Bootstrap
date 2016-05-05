@@ -180,15 +180,6 @@ Käyttäjään voi liittyä useita, mutta ei välttämättä liity yhtäkään tarjousta. Kä
 
 \includegraphics[width=\textwidth]{tietokantakaavio.jpg}
 
-\section{Käyttöohje}
-
-Sovelluksen osoite: \url{http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/}
-
-\textbf{Tunnus:} testikäyttäjä \\
-\textbf{Salasana:} testi
-
-Sovelluksen etusivulla listataan huutokaupassa myytävänä olevat tuotteet. Kirjautumaton käyttäjä voi tehdä tarjouksia myytävänä olevista tuotteista sekä katsella tuotteiden tietoja. Kirjautunut käyttäjä voi lisäksi lisätä huutokauppaan uuden tuotteen, muokata myytävänä olevan tuotteen tietoja sekä poistaa myytävänä olevan tuotteen.
-
 \section{Järjestelmän yleisrakenne}
 
 Sovellusta rakentaessa on noudatettu MVC-mallia. Kontrollerit, näkymät ja mallit sijaitsevat hakemistoissa app/controllers, app/views ja app/models. Apukirjastot on sijoitettu hakemistoon lib, ja sovelluksen käyttämät reitit ovat tiedostossa config/routes.php.
@@ -198,6 +189,19 @@ Sovellusta rakentaessa on noudatettu MVC-mallia. Kontrollerit, näkymät ja mallit
 Kaaviossa siniset laatikot kuvaavat järjestelmän julkisia sivuja ja tummankeltaiset kirjautumista vaativia sivuja.
 
 \includegraphics[width=\textwidth]{komponentit.jpg}
+
+\section{Asennustiedot}
+
+Asenna sovellus kopioimalla sen tiedot palvelimen nettiin näkyvään hakemistoon. Aseta sen jälkeen tietokannan tiedot oikeiksi tiedostoon lib/database.php.
+
+\section{Käyttöohje}
+
+Sovelluksen osoite: \url{http://juhopaak.users.cs.helsinki.fi/tsoha_huutokauppa/}
+
+\textbf{Tunnus:} testikäyttäjä \\
+\textbf{Salasana:} testi
+
+Sovelluksen etusivulla listataan huutokaupassa myytävänä olevat tuotteet. Kirjautumaton käyttäjä voi tehdä tarjouksia myytävänä olevista tuotteista, katsella tuotteiden tietoja sekä selata tuoteluokituksia. Kirjautunut käyttäjä voi lisäksi lisätä huutokauppaan uuden tuotteen, muokata myytävänä olevan tuotteen tietoja, poistaa myytävänä olevan tuotteen sekä lisätä, muokata ja poistaa tuoteluokituksia.
 
 \section{Tuntikirjanpito}
 
@@ -219,7 +223,8 @@ Kaaviossa siniset laatikot kuvaavat järjestelmän julkisia sivuja ja tummankeltai
  Ma 25.4.2016 & 1h & Dokumentaation päivitys \\ \hline
  Ti 3.4.2016 & 6h & Monesta moneen -yhteyden toteuttaminen \\ \hline
  Ti 3.4.2016 & 4h & Tarjous-tietokohde ja muut lopullisen palautuksen vaatimukset \\ \hline
- \textbf{Yhteensä} & \textbf{37,5h} & \\
+ To 5.4.2016 & 1h & Korjauksia ja dokumentaation päivitystä \\ \hline
+ \textbf{Yhteensä} & \textbf{38,5h} & \\
  \hline
 \end{tabular}
 

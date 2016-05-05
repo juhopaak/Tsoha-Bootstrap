@@ -111,7 +111,8 @@ class TuoteController extends BaseController {
 			$tuote->save();
 			Redirect::to('/tuote/' . $tuote->tunnus, array('viesti' => 'Tuotteen lisäys onnistui!'));
 		} else {
-			View::make('tuote/uusi.html', array('errors' => $errors, 'attributes' => $attributes));
+			$meklarit = Kayttaja::haeMeklarit();
+			View::make('tuote/uusi.html', array('errors' => $errors, 'attributes' => $attributes, 'meklarit' => $meklarit));
 		}
 		
 	}

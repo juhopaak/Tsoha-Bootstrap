@@ -15,7 +15,8 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Tarjous}{6}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Käyttäjä}{7}{subsubsection.3.2.4}
 \contentsline {section}{\numberline {4}Relaatiotietokantakaavio}{7}{section.4}
-\contentsline {section}{\numberline {5}Käyttöohje}{7}{section.5}
-\contentsline {section}{\numberline {6}Järjestelmän yleisrakenne}{8}{section.6}
-\contentsline {section}{\numberline {7}Käyttöliittymä ja järjestelmän komponentit}{8}{section.7}
-\contentsline {section}{\numberline {8}Tuntikirjanpito}{9}{section.8}
+\contentsline {section}{\numberline {5}Järjestelmän yleisrakenne}{7}{section.5}
+\contentsline {section}{\numberline {6}Käyttöliittymä ja järjestelmän komponentit}{8}{section.6}
+\contentsline {section}{\numberline {7}Asennustiedot}{8}{section.7}
+\contentsline {section}{\numberline {8}Käyttöohje}{8}{section.8}
+\contentsline {section}{\numberline {9}Tuntikirjanpito}{9}{section.9}
