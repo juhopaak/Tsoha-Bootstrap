@@ -38,7 +38,7 @@ Sovellus toteutetaan Apache-palvelimelle käyttäen PHP-ohjelmointikieltä ja Postg
 
 \subsection{Käyttäjäryhmät}
 
-\textbf{Asiakas} on rekisteröitynyt käyttäjä, joka voi tehdä tarjouksia huutokaupassa myynnissä olevista tuotteista.
+\textbf{Asiakas} on käyttäjä, joka voi tehdä tarjouksia huutokaupassa myynnissä olevista tuotteista.
 
 \textbf{Huutokauppa} on rekisteröitynyt käyttäjä, joka asettaa tuotteita myytäväksi sovellukseen sekä luokittelee tuotteita ja lisää niihin liittyviä tietoja.
 
@@ -50,19 +50,15 @@ Sovellus toteutetaan Apache-palvelimelle käyttäen PHP-ohjelmointikieltä ja Postg
 
 \textit{\textbf{Tarjouksen tekeminen}}
 
-Kirjautuneet asiakkaat voivat tehdä huutokaupassa myytävänä olevista tuotteista ostotarjouksia tiettyyn hintaan.
+Asiakkaat voivat tehdä huutokaupassa myytävänä olevista tuotteista ostotarjouksia tiettyyn hintaan.
 
 \textit{\textbf{Tuotetietojen katselu}}
 
-Kirjautuneet asiakkaat voivat katsella huutokaupan tuotteiden tietoja. Tietoihin voi kuulua esimerkiksi tuotteiden sijainti, kunto ja mahdollinen tuotekuva.
+Asiakkaat voivat katsella huutokaupan tuotteiden tietoja. Tietoihin voi kuulua esimerkiksi tuotteiden sijainti, kunto ja mahdollinen tuotekuva.
 
 \textit{\textbf{Henkilötietojen antaminen}}
 
 Asiakkaat antavat henkilötietonsa tarjouksen tekemisen yhteydessä.
-
-\textit{\textbf{Muut käyttötapaukset}}
-
-Kirjautuminen
 
 \subsubsection{Huutokaupan käyttötapaukset}
 
@@ -156,11 +152,17 @@ Tuoteluokkaan ei välttämättä liity yhtäkään tuotetta, mutta voi liittyä useita j
  \hline
  \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\ \hline
  Aika & Timestamp & Tarjouksen tekoaika \\ \hline
- Määrä & Desimaaliluku & Tarjouksen määrä \\
+ Määrä & Desimaaliluku & Tarjouksen määrä \\ \hline
+ Yhteystiedot & Merkkijono, max. 200 merkkiä & Tarjoajan yhteystiedot \\ \hline
+ Kokonimi & Merkkijono, max. 30 merkkiä & Tarjoajan koko nimi \\ \hline
+ Osoite & Merkkijono, max. 100 merkkiä & Tarjoajan katuosoite \\ \hline
+ Postinumero & Kokonaisluku & Tarjoajan postinumero \\ \hline
+ Kaupunki & Merkkijono, max. 30 merkkiä & Tarjoajan asuinkaupunki \\ \hline
+ Sotu & Merkkiono, max. 20 merkkiä & Tarjoajan sosiaaliturvatunnus \\
  \hline
 \end{tabular}
 
-Tarjous liittyy aina yhteen tuotteeseen sekä yhteen käyttäjään.
+Tarjous liittyy aina yhteen tuotteeseen.
 
 \subsubsection{Käyttäjä}
 
@@ -174,7 +176,7 @@ Tarjous liittyy aina yhteen tuotteeseen sekä yhteen käyttäjään.
  \hline
 \end{tabular}
 
-Käyttäjään voi liittyä useita, mutta ei välttämättä liity yhtäkään tarjousta. Käyttäjä voi liittyä useaan mutta ei välttämättä liity yhteenkään tuotteeseen.
+Käyttäjä voi liittyä useaan mutta ei välttämättä liity yhteenkään tuotteeseen.
 
 \section{Relaatiotietokantakaavio}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  5 MAY 2016 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.23)  5 MAY 2016 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,166 +326,171 @@ Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 53.
  [2 <./kaaviot/kayttotapauskaavio.jpg>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 63.
 
-Overfull \hbox (10.71341pt too wide) in paragraph at lines 79--80
+Overfull \hbox (10.71341pt too wide) in paragraph at lines 75--76
 \T1/cmr/m/n/12 tei-den luo-kit-te-luun. Esi-mer-kik-si voi-daan li-sä-tä luok-k
 a "Mat-ka-pu-he-li-met". 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 91.
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 91.
-[3]
+(babel)             in language  on input line 89.
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 93.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 93.
+[3]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 111.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 113.
  <kaaviot/kasitekaavio.jpg, id=138, 367.3725pt x 341.275pt>
 File: kaaviot/kasitekaavio.jpg Graphic file (type jpg)
 
 <use kaaviot/kasitekaavio.jpg>
-Package pdftex.def Info: kaaviot/kasitekaavio.jpg used on input line 118.
+Package pdftex.def Info: kaaviot/kasitekaavio.jpg used on input line 114.
 (pdftex.def)             Requested size: 390.0pt x 362.31737pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 118--119
+Overfull \hbox (30.0pt too wide) in paragraph at lines 114--115
 [] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 116.
 [4]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 118.
 
-Overfull \hbox (116.83931pt too wide) in paragraph at lines 124--137
+Overfull \hbox (116.83931pt too wide) in paragraph at lines 120--133
 [] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 134.
 [5 <./kaaviot/kasitekaavio.jpg>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 137.
 
-Overfull \hbox (41.92986pt too wide) in paragraph at lines 143--150
+Overfull \hbox (41.92986pt too wide) in paragraph at lines 139--146
 [] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 153.
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 149.
 
-Overfull \hbox (47.78397pt too wide) in paragraph at lines 167--176
+Overfull \hbox (51.84964pt too wide) in paragraph at lines 151--164
 [] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 177.
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 177.
-[6]
+(babel)             in language  on input line 167.
+
+Overfull \hbox (47.78397pt too wide) in paragraph at lines 169--178
+[] 
+ []
+
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 179.
- <kaaviot/tietokantakaavio.jpg, id=153, 954.56625pt x 615.29875pt>
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 179.
+[6]
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 181.
+ <kaaviot/tietokantakaavio.jpg, id=153, 954.56625pt x 707.64375pt>
 File: kaaviot/tietokantakaavio.jpg Graphic file (type jpg)
 
 <use kaaviot/tietokantakaavio.jpg>
-Package pdftex.def Info: kaaviot/tietokantakaavio.jpg used on input line 181.
-(pdftex.def)             Requested size: 390.0pt x 251.38219pt.
+Package pdftex.def Info: kaaviot/tietokantakaavio.jpg used on input line 183.
+(pdftex.def)             Requested size: 390.0pt x 289.11003pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 181--182
+Overfull \hbox (30.0pt too wide) in paragraph at lines 183--184
 [] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 183.
-
-Overfull \hbox (19.5286pt too wide) in paragraph at lines 187--187
+(babel)             in language  on input line 185.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 188.
+[7 <./kaaviot/tietokantakaavio.jpg>]
+Overfull \hbox (19.5286pt too wide) in paragraph at lines 189--189
 []\T1/cmr/bx/n/17.28 Käyttöliittymä ja jär-jes-tel-män kom-po-nen-tit 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 187.
-<kaaviot/komponentit.jpg, id=154, 722.7pt x 527.9725pt>
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 191.
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 191.
- [7 <./kaaviot/tietokantakaavio.jpg>]
+(babel)             in language  on input line 189.
+<kaaviot/komponentit.jpg, id=158, 865.2325pt x 527.9725pt>
 File: kaaviot/komponentit.jpg Graphic file (type jpg)
- <use kaaviot/komponentit.jpg>
-Package pdftex.def Info: kaaviot/komponentit.jpg used on input line 191.
-(pdftex.def)             Requested size: 390.0pt x 284.9156pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 191--192
+<use kaaviot/komponentit.jpg>
+Package pdftex.def Info: kaaviot/komponentit.jpg used on input line 193.
+(pdftex.def)             Requested size: 390.0pt x 237.98018pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 193--194
 [][] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 195.
 
-Overfull \hbox (39.7245pt too wide) in paragraph at lines 195--196
+Overfull \hbox (39.7245pt too wide) in paragraph at lines 197--198
 \T1/cmr/m/n/12 toon. Ase-ta sen jäl-keen tie-to-kan-nan tie-dot oi-keik-si tie-
 dos-toon lib/database.php. 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 197.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 199.
+(babel)             in language  on input line 199.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 201.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (76.26009pt too wide) in paragraph at lines 199--200
+Overfull \hbox (76.26009pt too wide) in paragraph at lines 201--202
 \T1/cmr/m/n/12 Sovelluksen osoi-te: []$\T1/cmtt/m/n/12 http : / / juhopaak . us
 ers . cs . helsinki . fi / tsoha _ huutokauppa/$[] 
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 207.
 [8 <./kaaviot/komponentit.jpg>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 208.
 
-Overfull \hbox (104.89507pt too wide) in paragraph at lines 208--230
+Overfull \hbox (104.89507pt too wide) in paragraph at lines 210--232
 [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 231.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 231.
+(babel)             in language  on input line 233.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (./dokumentaatio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `dokumentaatio.out' has not changed.
 (rerunfilecheck)             Checksum: 7B1DB5C3004C20E6E81BF1EC0E42A0D7;1367.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
  5782 strings out of 493089
  84909 string characters out of 6134841
- 174902 words of memory out of 5000000
+ 175902 words of memory out of 5000000
  9180 multiletter control sequences out of 15000+600000
  14385 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,6n,32p,441b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,6n,32p,441b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></us
@@ -495,7 +500,7 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on dokumentaatio.pdf (11 pages, 363601 bytes).
+Output written on dokumentaatio.pdf (11 pages, 371362 bytes).
 PDF statistics:
  206 PDF objects out of 1000 (max. 8388607)
  179 compressed objects within 2 object streams
